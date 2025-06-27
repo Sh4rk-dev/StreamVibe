@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+@import "tailwindcss";
+
+@theme {
+  /* Font Family */
+
+  --font-Manrope: "Manrope", sans-serif;
+
+  /* Colors */
+  --color-Custom-White: "#FFF";
+  --color-Custom-Black: "#000";
+
+  /* Color Red */
+  --color-Custom-Red-45: #e50000;
+  --color-Custom-Red-50: #ff0000;
+  --color-Custom-Red-55: #ff1919;
+  --color-Custom-Red-60: #ff3333;
+  --color-Custom-Red-80: #ff9999;
+  --color-Custom-Red-90: #ffcccc;
+  --color-Custom-Red-95: #ffe5e5;
+  --color-Custom-Red-99: #fffafa;
+
+  /* Color Black */
+  --color-Custom-Black-06: #0f0f0f;
+  --color-Custom-Black-08: #141414;
+  --color-Custom-Black-10: #1a1a1a;
+  --color-Custom-Black-12: #1f1f1f;
+  --color-Custom-Black-15: #262626;
+  --color-Custom-Black-20: #333333;
+  --color-Custom-Black-25: #404040;
+  --color-Custom-Black-30: #4c4c4c;
+
+  /* Color Gray */
+  --color-Custom-Gray-60: #999999;
+  --color-Custom-Gray-65: #a6a6a6;
+  --color-Custom-Gray-70: #b3b3b3;
+  --color-Custom-Gray-75: #bfbfbf;
+  --color-Custom-Gray-90: #e4e4e7;
+  --color-Custom-Gray-95: #f1f1f3;
+  --color-Custom-Gray-97: #f7f7f8;
+  --color-Custom-Gray-99: #fcfcfd;
+}
