@@ -5,7 +5,7 @@ export function CardCategory() {
     <div className="rounded-lg bg-Custom-Black-10 border border-Custom-Black-15">
       <div className="p-7">
         <picture className="mx-auto">
-          <img src="./src/assets/Category.png" alt="image" />
+          <img src="./src/assets/photo/Category.png" alt="image" />
         </picture>
 
         <div className="flex flex-row justify-between">

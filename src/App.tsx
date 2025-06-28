@@ -36,7 +36,7 @@ export function App() {
         <section className="flex h-screen flex-col justify-between mb-37.5">
           <Header />
           <picture className="inset-0 absolute -z-10">
-            <img src="/src/assets/background.png" />
+            <img src="/src/assets/photo/background.png" />
           </picture>
 
           <div className="flex flex-col gap-4 justify-center items-center">
@@ -179,10 +179,10 @@ export function App() {
             <CardPlan />
           </div>
 
-          <div className="flex flex-row rounded-lg h-74">
+          <div className="flex flex-row rounded-lg h-74 border border-Custom-Black-15">
             <picture className="absolute -z-10 pr-40">
               <img
-                src="./src/assets/Banner-StreamVibe.png"
+                src="./src/assets/photo/Banner-StreamVibe.png"
                 alt="Banner-StreamVibe"
                 className="rounded-lg "
               />
@@ -209,6 +209,110 @@ export function App() {
           </div>
         </section>
       </div>
+
+      <footer className="pt-25 bg-Custom-Black-06 px-40">
+        <div className="grid grid-cols-6 grid-rows-1 gap-7.5 pb-25">
+          <div>
+            <h1 className="font-bold font-Manrope text- text-white mb-3">
+              Home
+            </h1>
+            <div className="flex flex-col gap-3.5">
+              <h1 className="font-Manrope text-Custom-Gray-60">Categories</h1>
+              <h1 className="font-Manrope text-Custom-Gray-60">Devices</h1>
+              <h1 className="font-Manrope text-Custom-Gray-60">Pricing</h1>
+              <h1 className="font-Manrope text-Custom-Gray-60">FAQ</h1>
+            </div>
+          </div>
+
+          <div>
+            <h1 className="font-bold font-Manrope text- text-white mb-3">
+              Movies
+            </h1>
+            <div className="flex flex-col gap-3.5">
+              <h1 className="font-Manrope text-Custom-Gray-60">Gernes</h1>
+              <h1 className="font-Manrope text-Custom-Gray-60">Trending</h1>
+              <h1 className="font-Manrope text-Custom-Gray-60">New Release</h1>
+              <h1 className="font-Manrope text-Custom-Gray-60">Popular</h1>
+            </div>
+          </div>
+
+          <div>
+            <h1 className="font-bold font-Manrope text- text-white mb-3">
+              Shows
+            </h1>
+            <div className="flex flex-col gap-3.5">
+              <h1 className="font-Manrope text-Custom-Gray-60">Gernes</h1>
+              <h1 className="font-Manrope text-Custom-Gray-60">Trending</h1>
+              <h1 className="font-Manrope text-Custom-Gray-60">New Release</h1>
+              <h1 className="font-Manrope text-Custom-Gray-60">Popular</h1>
+            </div>
+          </div>
+
+          <div>
+            <h1 className="font-bold font-Manrope text- text-white mb-3">
+              Support
+            </h1>
+            <div>
+              <h1 className="font-Manrope text-Custom-Gray-60">Contact Us</h1>
+            </div>
+          </div>
+
+          <div>
+            <h1 className="font-bold font-Manrope text- text-white mb-3">
+              Subscription
+            </h1>
+            <div className="flex flex-col gap-3.5">
+              <h1 className="font-Manrope text-Custom-Gray-60">Plans</h1>
+              <h1 className="font-Manrope text-Custom-Gray-60">Features</h1>
+            </div>
+          </div>
+
+          <div>
+            <div className="gap-3.5">
+              <h1 className="font-bold font-Manrope text- text-white mb-3">
+                Connect With Us
+              </h1>
+            </div>
+            <div className="flex flex-row gap-3.5">
+              <picture className=" p-4 rounded-lg border border-Custom-Black-15 bg-Custom-Black-10">
+                <img src="./src/assets/icons/FacebookIcon.svg" />
+              </picture>
+              <picture className=" p-4 rounded-lg border border-Custom-Black-15 bg-Custom-Black-10">
+                <img src="./src/assets/icons/TwitterIcon.svg" />
+              </picture>
+              <picture className=" p-4 rounded-lg border border-Custom-Black-15 bg-Custom-Black-10">
+                <img src="./src/assets/icons/LinkedInIcon.svg" />
+              </picture>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-row justify-between pt-4 pb-12.5 border-t border-Custom-Black-15 ">
+          <div className="">
+            <h1 className="font-Manrope text-Custom-Gray-60">
+              @2023 streamvib, All Rights Reserved
+            </h1>
+          </div>
+
+          <div className="">
+            <div className="flex flex-row gap-3.5 items-center">
+              <h1 className="font-Manrope text-Custom-Gray-60">Terms of Use</h1>
+
+              <div className="h-4 w-px bg-Custom-Gray-60/50" />
+
+              <h1 className="font-Manrope text-Custom-Gray-60">
+                Privacy Policy
+              </h1>
+
+              <div className="h-4 w-px bg-Custom-Gray-60/50" />
+
+              <h1 className="font-Manrope text-Custom-Gray-60">
+                Cookie Policy
+              </h1>
+            </div>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }
