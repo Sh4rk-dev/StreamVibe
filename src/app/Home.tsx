@@ -4,13 +4,13 @@ import { useScroll, useSpring } from "motion/react";
 import { PlayIcon } from "@heroicons/react/16/solid";
 import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
 
-import { CardPlan } from "./components/CardPlan";
-import { Header } from "./components/Header/Header";
-import { CardCategory } from "./components/CardCategory";
-import { DeviceSupportGrid } from "./components/DeviceSupportGrid";
-import { AccordionQuestion } from "./components/AccordionQuestion";
+import { Header } from "@/components/Header/Header";
+import { CardPlan } from "@/components/Cards/CardPlan";
+import { CardCategory } from "@/components/Cards/CardCategory";
+import { AccordionQuestion } from "@/components/AccordionQuestion";
+import { DeviceSupportGrid } from "@/components/DeviceSupportGrid";
 
-export function App() {
+export default function Home() {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,

@@ -3,7 +3,7 @@ import { ArrowRightIcon } from "@heroicons/react/16/solid";
 export function CardCategory() {
   return (
     <div className="rounded-lg bg-Custom-Black-10 border border-Custom-Black-15">
-      <div className="p-7">
+      <div className="p-5">
         <picture className="mx-auto">
           <img src="./src/assets/photo/Category.png" alt="image" />
         </picture>
