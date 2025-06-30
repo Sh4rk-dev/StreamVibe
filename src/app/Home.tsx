@@ -179,17 +179,9 @@ export default function Home() {
             <CardPlan />
           </div>
 
-          <div className="flex flex-row rounded-lg h-74 border border-Custom-Black-15">
-            <picture className="absolute -z-10 pr-40">
-              <img
-                src="./src/assets/photo/Banner-StreamVibe.png"
-                alt="Banner-StreamVibe"
-                className="rounded-lg "
-              />
-            </picture>
-
-            <div className="flex flex-row items-center justify-between w-full gap-20 px-20">
-              <div className="flex flex-col gap-3.5 justify-center ">
+          <div className="flex flex-row rounded-lg bg-[url('./src/assets/photo/Banner-StreamVibe.png')] bg-cover bg-center bg-no-repeat h-[400px] border border-Custom-Black-15">
+            <div className="flex items-center justify-between gap-20 px-20">
+              <div className="flex flex-col gap-3.5 ">
                 <h1 className="text-5xl font-Manrope font-bold text-white">
                   Start your free trial today!
                 </h1>
@@ -199,12 +191,12 @@ export default function Home() {
                   users to sign up for a free trial of StreamVibe.
                 </span>
               </div>
+            </div>
 
-              <div className="">
-                <button className="px-6 py-4 rounded-lg bg-Custom-Red-45 text-white">
-                  Start a Free Trail
-                </button>
-              </div>
+            <div className="flex-1 flex justify-around items-center">
+              <button className="px-6 py-4 rounded-lg bg-Custom-Red-45 text-white">
+                Start a Free Trail
+              </button>
             </div>
           </div>
         </section>
