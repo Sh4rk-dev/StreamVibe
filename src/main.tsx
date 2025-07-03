@@ -6,6 +6,7 @@ import { RouterProvider, createBrowserRouter } from "react-router";
 
 import Home from "./app/Home";
 import MoviesAndShows from "./app/MoviesAndShows";
+import MoviesInfo from "@/app/MoviesInfo";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,11 @@ const router = createBrowserRouter([
     path: "/movies&shows",
     Component: MoviesAndShows,
     errorElement: <h1>404</h1>,
+  },
+  {
+    // path: "/moviesInfo/:movieId",
+    path: "/moviesInfo/1",
+    Component: MoviesInfo,
   },
 ]);
 
