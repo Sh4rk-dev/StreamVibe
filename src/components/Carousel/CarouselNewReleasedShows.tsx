@@ -2,10 +2,17 @@ import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
 
 import { CardNewReleasedShows } from "@/components/Cards/CardNewReleasedShows";
 
+import { motion } from "framer-motion";
+
 export function CarouselNewReleasesShows() {
   {
     return (
-      <div>
+      <motion.div
+        initial={{ y: 100, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.2, duration: 1.5, ease: "easeInOut" }}
+      >
         <div className="flex flex-row justify-between items-center pb-12.5">
           <div>
             <h1 className="font-Manrope text-white text-4xl font-bold">
@@ -38,7 +45,7 @@ export function CarouselNewReleasesShows() {
           <CardNewReleasedShows />
           <CardNewReleasedShows />
         </div>
-      </div>
+      </motion.div>
     );
   }
 }

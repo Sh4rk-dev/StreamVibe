@@ -2,10 +2,16 @@ import { CardMustWatchMovies } from "@/components/Cards/CardMustWatchMovies";
 
 import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
 
+import { motion } from "framer-motion";
 export function CarouselMustWatchMovies() {
   {
     return (
-      <div>
+      <motion.div
+        initial={{ y: 100, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.2, duration: 1.5, ease: "easeInOut" }}
+      >
         <div className="flex flex-row justify-between items-center pb-12.5">
           <div>
             <h1 className="font-Manrope text-white text-4xl font-bold">
@@ -37,7 +43,7 @@ export function CarouselMustWatchMovies() {
           <CardMustWatchMovies />
           <CardMustWatchMovies />
         </div>
-      </div>
+      </motion.div>
     );
   }
 }
