@@ -1,4 +1,4 @@
-import { ContainerButton } from "./Container-Button";
+import { NavItens } from "@/components/Header/NavItens";
 
 export function Header() {
   return (
@@ -6,7 +6,8 @@ export function Header() {
       <picture className="w-40 h-12 bg-no-repeat bg-contain">
         <img src="/src/assets/icons/Logo-Desk.svg" />
       </picture>
-      <ContainerButton />
+
+      <NavItens />
     </header>
   );
 }
