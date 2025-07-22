@@ -6,7 +6,7 @@ import {
   ArrowLeftIcon,
   ArrowRightIcon,
   SpeakerWaveIcon,
-  HandThumbUpIcon,
+  HandThumbUpIcon
 } from "@heroicons/react/24/outline";
 
 import { Header } from "@/components/Header/Header";
@@ -31,7 +31,7 @@ export default function MoviesAndShows() {
         <div className="px-40">
           <Header />
 
-          <section className="mb-45">
+          <section className="mb-75">
             <div className="flex-1 w-full h-[800px] rounded-t-xl border-t border-Custom-Black-15 ">
               <picture className="inset-0 -z-10 mask-b-from-10%">
                 <img
@@ -41,7 +41,7 @@ export default function MoviesAndShows() {
                 />
               </picture>
 
-              <div className="flex flex-col z-10 relative -top-70">
+              <div className="flex flex-col z-10 relative -top-80">
                 <div className="flex flex-col items-center gap-1 text-center px-52">
                   <h1 className="font-Manrope font-bold text-white text-4xl">
                     Avengers : Endgame

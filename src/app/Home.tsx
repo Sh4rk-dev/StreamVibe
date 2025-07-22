@@ -15,7 +15,7 @@ export default function Home() {
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
-    restDelta: 0.001,
+    restDelta: 0.001
   });
 
   return (
@@ -30,7 +30,7 @@ export default function Home() {
           right: 0,
           height: 2,
           originX: 0,
-          backgroundColor: "#FF0000",
+          backgroundColor: "#FF0000"
         }}
       />
       <motion.div
@@ -42,8 +42,11 @@ export default function Home() {
         <div className="px-40">
           <section className="flex h-screen flex-col justify-between mb-37.5">
             <Header />
-            <picture className="inset-0 absolute -z-10">
-              <img src="/src/assets/photo/background.png" />
+            <picture className="flex w-full inset-0 absolute -z-10">
+              <img
+                className="object-cover"
+                src="/src/assets/photo/background.png"
+              />
             </picture>
 
             <div className="flex flex-col gap-4 justify-center items-center">
@@ -104,7 +107,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex flex-row gap-7 mb-36">
+              <div className="flex justify-between flex-row gap-7 mb-36">
                 <CardCategory />
                 <CardCategory />
                 <CardCategory />

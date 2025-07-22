@@ -14,7 +14,7 @@ createRoot(document.getElementById("root")!).render(
       <Routes>
         <Route element={<Home />} index />
         <Route path="/moviesInfo/1" element={<MoviesInfo />} />
-        <Route path="/movies&shows" element={<MoviesAndShows />} />
+        <Route path="/movies-and-shows" element={<MoviesAndShows />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

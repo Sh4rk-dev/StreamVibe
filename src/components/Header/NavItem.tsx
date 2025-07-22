@@ -5,9 +5,22 @@ interface NavItemProps {
   isActive?: boolean;
 }
 
+const generatorSlug = (title: string) => {
+  return title
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "") // remove acentos
+    .replace(/&/g, "and") // troca & por 'and'
+    .replace(/[^a-zA-Z0-9 ]/g, "") // remove caracteres especiais
+    .trim()
+    .replace(/\s+/g, "-") // troca espaços por hífen
+    .toLowerCase();
+};
+
 function NavItem({ title, isActive }: NavItemProps) {
+  const slug = title === "Home" ? "/" : `/${generatorSlug(title)}`;
+
   return (
-    <Link to={title === "Home" ? "/" : `/${title.toLowerCase()}`}>
+    <Link to={slug}>
       <li
         className={`list-none ${
           isActive ? "px-5 py-3 bg-Custom-Black-10 rounded-lg" : ""
@@ -22,20 +35,20 @@ function NavItem({ title, isActive }: NavItemProps) {
 const NavItemList = [
   {
     title: "Home",
-    url: "/",
+    url: "/"
   },
   {
-    title: "Movies&Shows",
-    url: "/movies&shows",
+    title: "Movies & Shows",
+    url: "/movies-and-shows"
   },
   {
     title: "Support",
-    url: "/support",
+    url: "/support"
   },
   {
     title: "Subscriptions",
-    url: "/subscriptions",
-  },
+    url: "/subscriptions"
+  }
 ];
 
 export { NavItemList, NavItem };
