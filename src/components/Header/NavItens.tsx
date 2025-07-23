@@ -3,8 +3,7 @@ import { MagnifyingGlassIcon } from "@heroicons/react/16/solid";
 import { BellIcon } from "@heroicons/react/24/outline";
 
 export function NavItens() {
-  const pathName = window.location.pathname;
-
+  const pathName = window.location.pathname.split("/")[1];
   return (
     <>
       <div className="flex p-1.5 px-4 bg-Custom-Black-06 rounded-xl border-2 border-Custom-Black-20 ">
@@ -13,7 +12,7 @@ export function NavItens() {
             <NavItem
               key={index}
               title={item.title}
-              isActive={pathName === item.url}
+              isActive={pathName === item.url.replace("/", "")}
             />
           ))}
         </ul>

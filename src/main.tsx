@@ -13,8 +13,8 @@ createRoot(document.getElementById("root")!).render(
     <BrowserRouter>
       <Routes>
         <Route element={<Home />} index />
-        <Route path="/moviesInfo/1" element={<MoviesInfo />} />
         <Route path="/movies-and-shows" element={<MoviesAndShows />} />
+        <Route path="/movies-and-shows/moviesInfo/1" element={<MoviesInfo />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
