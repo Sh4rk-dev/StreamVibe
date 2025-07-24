@@ -3,6 +3,7 @@ import { ReviewCard } from "@/components/ReviewCard";
 import {
   ArrowLeftIcon,
   ArrowRightIcon,
+  CalendarIcon,
   HandThumbUpIcon,
   PlayIcon,
   PlusIcon,
@@ -53,8 +54,8 @@ export default function MoviesInfo() {
         </section>
 
         <section>
-          <div className="flex flex-row gap-5 bg-red-400">
-            <div className="flex flex-col gap-7.5 ">
+          <div className="grid grid-cols-3 grid-rows-3 gap-4">
+            <div className="col-span-2 flex flex-col gap-7.5 ">
               <div className="flex flex-col p-12.5 rounded-xl border gap-3.5 border-Custom-Black-15 bg-Custom-Black-10">
                 <h1 className="font-Manrope font-medium text-Custom-Gray-60">
                   Description
@@ -67,7 +68,7 @@ export default function MoviesInfo() {
                 </span>
               </div>
 
-              <div className="flex flex-col p-12.5 rounded-xl border gap-3.5 border-Custom-Black-15 bg-Custom-Black-10">
+              <div className=" col-start-1 row-start-2 flex flex-col p-12.5 rounded-xl border gap-3.5 border-Custom-Black-15 bg-Custom-Black-10">
                 <div className="flex flex-row items-center justify-between">
                   <h1 className="mt-3 font-Manrope font-medium text-Custom-Gray-60">
                     Cast
@@ -94,7 +95,7 @@ export default function MoviesInfo() {
                 </div>
               </div>
 
-              <div className="flex flex-col p-12.5 bg-Custom-Black-10 rounded-lg border border-Custom-Black-15">
+              <div className="col-span-2 col-start-1 row-start-3 flex flex-col p-12.5 bg-Custom-Black-10 rounded-lg border border-Custom-Black-15">
                 <div className="flex flex-row items-center justify-between">
                   <h1 className="font-Manrope font-medium text-Custom-Gray-60">
                     Reviews
@@ -117,8 +118,27 @@ export default function MoviesInfo() {
               </div>
             </div>
 
-            <div className="">
-              <h1>Info Details Movie</h1>
+            <div className="row-span-1 col-start-3 row-start-1 flex flex-1 flex-col p-12.5 rounded-xl border border-Custom-Black-15 bg-Custom-Black-10">
+              <div className="flex flex-1 flex-col gap-3.5">
+                <div className="flex flex-row items-center gap-1 mb-3.5">
+                  <CalendarIcon className="w-6 h-6 text-Custom-Gray-60" />
+                  <h1 className="font-Manrope font-medium text-Custom-Gray-60">
+                    Released Year
+                  </h1>
+                </div>
+                <span className="font-Manrope font-medium text-white">
+                  2022
+                </span>
+              </div>
+
+              <div className="">
+                <div className=" ">
+                  <h1>Available Languages</h1>
+                </div>
+                <span className="font-Manrope font-medium text-white">
+                  English, Spanish, French
+                </span>
+              </div>
             </div>
           </div>
         </section>
