@@ -5,10 +5,17 @@ import {
   ArrowRightIcon,
   CalendarIcon,
   HandThumbUpIcon,
+  LanguageIcon,
   PlayIcon,
   PlusIcon,
-  SpeakerWaveIcon
+  SpeakerWaveIcon,
+  StarIcon
 } from "@heroicons/react/16/solid";
+
+import {
+  Squares2X2Icon,
+  StarIcon as StarIconSolid
+} from "@heroicons/react/24/outline";
 
 export default function MoviesInfo() {
   return (
@@ -119,25 +126,161 @@ export default function MoviesInfo() {
             </div>
 
             <div className="row-span-1 col-start-3 row-start-1 flex flex-1 flex-col p-12.5 rounded-xl border border-Custom-Black-15 bg-Custom-Black-10">
-              <div className="flex flex-1 flex-col gap-3.5">
-                <div className="flex flex-row items-center gap-1 mb-3.5">
-                  <CalendarIcon className="w-6 h-6 text-Custom-Gray-60" />
-                  <h1 className="font-Manrope font-medium text-Custom-Gray-60">
-                    Released Year
-                  </h1>
+              <div className="mb-7.5">
+                <div className="flex flex-1 flex-col gap-3.5">
+                  <div className="flex flex-row items-center gap-1 ">
+                    <CalendarIcon className="w-6 h-6 text-Custom-Gray-60" />
+                    <h1 className="font-Manrope font-medium text-Custom-Gray-60">
+                      Released Year
+                    </h1>
+                  </div>
+                  <span className="font-Manrope font-medium text-white">
+                    2022
+                  </span>
                 </div>
-                <span className="font-Manrope font-medium text-white">
-                  2022
-                </span>
               </div>
 
-              <div className="">
-                <div className=" ">
-                  <h1>Available Languages</h1>
+              <div className="flex flex-col gap-3.5 mb-7.5">
+                <div className="flex flex-row gap-1">
+                  <LanguageIcon className="w-6 h-6 text-Custom-Gray-60" />
+                  <h1 className="font-Manrope font-medium text-Custom-Gray-60">
+                    Available Languages
+                  </h1>
                 </div>
-                <span className="font-Manrope font-medium text-white">
-                  English, Spanish, French
-                </span>
+
+                <div className="flex flex-row flex-wrap gap-2.5">
+                  <span className="py-2 px-3.5 rounded-xl bg-Custom-Black-08 border border-Custom-Black-15 font-Manrope font-medium text-white">
+                    English
+                  </span>
+                  <span className="py-2 px-3.5 rounded-xl bg-Custom-Black-08 border border-Custom-Black-15 font-Manrope font-medium text-white">
+                    Hindi
+                  </span>
+                  <span className="py-2 px-3.5 rounded-xl bg-Custom-Black-08 border border-Custom-Black-15 font-Manrope font-medium text-white">
+                    Tamil
+                  </span>
+                  <span className="py-2 px-3.5 rounded-xl bg-Custom-Black-08 border border-Custom-Black-15 font-Manrope font-medium text-white">
+                    Telegu
+                  </span>
+                  <span className="py-2 px-3.5 rounded-xl bg-Custom-Black-08 border border-Custom-Black-15 font-Manrope font-medium text-white">
+                    Kannada
+                  </span>
+                  <span className="py-2 px-3.5 rounded-xl bg-Custom-Black-08 border border-Custom-Black-15 font-Manrope font-medium text-white">
+                    Espanhol
+                  </span>
+                </div>
+              </div>
+
+              <div className="flex flex-col gap-3.5 mb-7.5">
+                <div className="flex flex-row items-center gap-1 mt-6">
+                  <StarIconSolid className="w-6 h-6 text-Custom-Gray-60" />
+                  <h1 className="font-Manrope font-medium text-Custom-Gray-60">
+                    Ratings
+                  </h1>
+                </div>
+
+                <div className="flex flex-1 flex-row items-center gap-3 mt-3">
+                  <div className="flex-1 p-4 rounded-xl bg-Custom-Black-08 border border-Custom-Black-15">
+                    <span className="pl-2.5 font-Manrope text-white font-bold">
+                      IMDb
+                    </span>
+                    <div className="flex flex-row items-center px-2.5 py-1.5 gap-0.5">
+                      <StarIcon className="w-6 h-6 text-Custom-Red-45" />
+                      <StarIcon className="w-6 h-6 text-Custom-Red-45" />
+                      <StarIcon className="w-6 h-6 text-Custom-Red-45" />
+                      <StarIcon className="w-6 h-6 text-Custom-Red-45" />
+                      <StarIcon className="w-6 h-6 text-Custom-Gray-60" />
+                      <span className="text-xl font-Manrope text-Custom-Gray-60">
+                        4.5
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="flex-1 p-4 rounded-xl bg-Custom-Black-08 border border-Custom-Black-15">
+                    <span className="pl-2.5 font-Manrope text-white font-bold">
+                      Streamvibe
+                    </span>
+                    <div className="flex flex-row items-center px-2.5 py-1.5 gap-0.5">
+                      <StarIcon className="w-6 h-6 text-Custom-Red-45" />
+                      <StarIcon className="w-6 h-6 text-Custom-Red-45" />
+                      <StarIcon className="w-6 h-6 text-Custom-Red-45" />
+                      <StarIcon className="w-6 h-6 text-Custom-Red-45" />
+                      <StarIcon className="w-6 h-6 text-Custom-Red-45" />
+                      <span className="text-xl font-Manrope text-Custom-Gray-60">
+                        5.0
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex flex-col gap-3.5 mb-7.5">
+                <div className="flex flex-row items-center gap-1 mt-6">
+                  <Squares2X2Icon className="w-6 h-6 text-Custom-Gray-60" />
+                  <h1 className="font-Manrope font-medium text-Custom-Gray-60">
+                    Genres
+                  </h1>
+                </div>
+
+                <div className="flex flex-row items-center gap-2 mt-2">
+                  <span className="py-2 px-3.5 rounded-xl bg-Custom-Black-08 border border-Custom-Black-15 font-Manrope font-medium text-white">
+                    Action
+                  </span>
+                  <span className="py-2 px-3.5 rounded-xl bg-Custom-Black-08 border border-Custom-Black-15 font-Manrope font-medium text-white">
+                    Adventure
+                  </span>
+                </div>
+              </div>
+
+              <div className="flex flex-col gap-3.5 mb-7.5">
+                <h1 className="font-Manrope font-medium text-Custom-Gray-60">
+                  Director
+                </h1>
+
+                <div className="p-3.5 rounded-xl bg-Custom-Black-08 border border-Custom-Black-15">
+                  <div className="flex flex-row items-center gap-2">
+                    <picture className="w-15 h-15 rounded-xl justify-between border border-Custom-Black-15">
+                      <img
+                        src={`/src/assets/photo/Actor1.png`}
+                        alt={`Actor1`}
+                        className="w-full h-full object-cover rounded-xl"
+                      />
+                    </picture>
+                    <div className="flex flex-col items-start">
+                      <span className="font-Manrope font-medium text-white">
+                        Rishab Shetty
+                      </span>
+                      <span className="font-Manrope font-medium text-Custom-Gray-60">
+                        From India
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex flex-col gap-3.5 mb-7.5">
+                <h1 className="font-Manrope font-medium text-Custom-Gray-60">
+                  Music
+                </h1>
+
+                <div className="p-3.5 rounded-xl bg-Custom-Black-08 border border-Custom-Black-15">
+                  <div className="flex flex-row items-center gap-2">
+                    <picture className="w-15 h-15 rounded-xl justify-between border border-Custom-Black-15">
+                      <img
+                        src={`/src/assets/photo/ProductMusic.png`}
+                        alt={`Actor1`}
+                        className="w-full h-full object-cover rounded-xl"
+                      />
+                    </picture>
+                    <div className="flex flex-col items-start">
+                      <span className="font-Manrope font-medium text-white">
+                        B. Ajaneesh Loknath
+                      </span>
+                      <span className="font-Manrope font-medium text-Custom-Gray-60">
+                        From India
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
