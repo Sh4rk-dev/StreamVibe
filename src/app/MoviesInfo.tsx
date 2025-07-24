@@ -1,9 +1,12 @@
 import { Header } from "@/components/Header/Header";
+import { ReviewCard } from "@/components/ReviewCard";
 import {
+  ArrowLeftIcon,
+  ArrowRightIcon,
   HandThumbUpIcon,
   PlayIcon,
   PlusIcon,
-  SpeakerWaveIcon,
+  SpeakerWaveIcon
 } from "@heroicons/react/16/solid";
 
 export default function MoviesInfo() {
@@ -50,8 +53,73 @@ export default function MoviesInfo() {
         </section>
 
         <section>
-          <div className="">
-            <h1>details</h1>
+          <div className="flex flex-row gap-5 bg-red-400">
+            <div className="flex flex-col gap-7.5 ">
+              <div className="flex flex-col p-12.5 rounded-xl border gap-3.5 border-Custom-Black-15 bg-Custom-Black-10">
+                <h1 className="font-Manrope font-medium text-Custom-Gray-60">
+                  Description
+                </h1>
+                <span className="font-Manrope font-medium text-white">
+                  Kantara is a 2022 Indian Kannada-language action thriller film
+                  written and directed by Rishab Shetty, who also stars in the
+                  lead role. The film is set in a rural village in Karnataka and
+                  revolves around the conflict between
+                </span>
+              </div>
+
+              <div className="flex flex-col p-12.5 rounded-xl border gap-3.5 border-Custom-Black-15 bg-Custom-Black-10">
+                <div className="flex flex-row items-center justify-between">
+                  <h1 className="mt-3 font-Manrope font-medium text-Custom-Gray-60">
+                    Cast
+                  </h1>
+                  <div className="flex flex-row items-center gap-3.5 mt-3">
+                    <ArrowLeftIcon className="w-13 h-13 text-Custom-Gray-60 bg-Custom-Black-08 border border-Custom-Black-15 rounded-full p-3.5" />
+                    <ArrowRightIcon className="w-13 h-13 text-Custom-Gray-60 bg-Custom-Black-08 border border-Custom-Black-15 rounded-full p-3.5" />
+                  </div>
+                </div>
+
+                <div className="flex flex-row items-centers justify-between mt-3">
+                  {Array.from({ length: 8 }).map((_, i) => (
+                    <picture
+                      key={i}
+                      className="w-25 h-25 rounded-xl justify-between border border-Custom-Black-15"
+                    >
+                      <img
+                        src={`/src/assets/photo/Actor1.png`}
+                        alt={`Actor1`}
+                        className="w-full h-full object-cover rounded-xl"
+                      />
+                    </picture>
+                  ))}
+                </div>
+              </div>
+
+              <div className="flex flex-col p-12.5 bg-Custom-Black-10 rounded-lg border border-Custom-Black-15">
+                <div className="flex flex-row items-center justify-between">
+                  <h1 className="font-Manrope font-medium text-Custom-Gray-60">
+                    Reviews
+                  </h1>
+
+                  <button className="flex flex-row items-center gap-2 px-6 py-3.5 bg-Custom-Red-45 text-white rounded-lg mt-4">
+                    <PlusIcon className="w-6 h-6 text-white" />
+                    <span>Add Your Review</span>
+                  </button>
+                </div>
+
+                <div className="flex flex-col gap-4 py-10">
+                  <ReviewCard
+                    name="John Doe"
+                    location="New York"
+                    rating={4.5}
+                    reviewText="This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it."
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div className="">
+              <h1>Info Details Movie</h1>
+            </div>
           </div>
         </section>
 

@@ -211,7 +211,7 @@ export default function Home() {
                 <CardPlan />
               </div>
 
-              <div className="flex flex-row rounded-lg bg-[url('./src/assets/photo/Banner-StreamVibe.png')] bg-cover bg-center bg-no-repeat h-[400px] border border-Custom-Black-15">
+              <div className="flex flex-row rounded-lg bg-[url('./assets/photo/Banner-StreamVibe.png')] bg-cover bg-center bg-no-repeat h-[400px] border border-Custom-Black-15">
                 <div className="flex items-center justify-between gap-20 px-20">
                   <div className="flex flex-col gap-3.5 ">
                     <h1 className="text-5xl font-Manrope font-bold text-white">
