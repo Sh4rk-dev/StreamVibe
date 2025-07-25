@@ -1,49 +1,47 @@
 import { PlayIcon } from "@heroicons/react/16/solid";
-import { motion } from "framer-motion";
-
 import {
-  PlusIcon,
   ArrowLeftIcon,
   ArrowRightIcon,
-  SpeakerWaveIcon,
-  HandThumbUpIcon
+  HandThumbUpIcon,
+  PlusIcon,
+  SpeakerWaveIcon
 } from "@heroicons/react/24/outline";
-
-import { Header } from "@/components/Header/Header";
+import { motion } from "framer-motion";
 import { CarouselGenre } from "@/components/Carousel/CarouselGenre";
+import { CarouselMustWatchMovies } from "@/components/Carousel/CarouselMustWatchMovies";
+import { CarouselMustWatchShows } from "@/components/Carousel/CarouselMustWatchShows";
+import { CarouselNewReleasesShows } from "@/components/Carousel/CarouselNewReleasedShows";
+import { CarouselNewReleases } from "@/components/Carousel/CarouselNewReleases";
 import { CarouselPopularGenres } from "@/components/Carousel/CarouselPopularGenres";
 import { CarouselTrendingNow } from "@/components/Carousel/CarouselTrendingNow";
-import { CarouselNewReleases } from "@/components/Carousel/CarouselNewReleases";
-import { CarouselMustWatchMovies } from "@/components/Carousel/CarouselMustWatchMovies";
 import { CarouselTrendingShowsNow } from "@/components/Carousel/CarouselTrendingShowsNow";
-import { CarouselNewReleasesShows } from "@/components/Carousel/CarouselNewReleasedShows";
-import { CarouselMustWatchShows } from "@/components/Carousel/CarouselMustWatchShows";
+import { Header } from "@/components/Header/Header";
 
 export default function MoviesAndShows() {
   return (
     <>
       <motion.div
         initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
         transition={{ delay: 0.2, duration: 1.5, ease: "easeInOut" }}
+        viewport={{ once: true }}
+        whileInView={{ opacity: 1 }}
       >
         <div className="px-40">
           <Header />
 
           <section className="mb-75">
-            <div className="flex-1 w-full h-[800px] rounded-t-xl border-t border-Custom-Black-15 ">
-              <picture className="inset-0 -z-10 mask-b-from-10%">
+            <div className="h-[800px] w-full flex-1 rounded-t-xl border-Custom-Black-15 border-t ">
+              <picture className="-z-10 mask-b-from-10% inset-0">
                 <img
-                  src="/src/assets/photo/PhotoMovieAvengers.png"
                   alt="image"
                   className="rounded-t-xl"
+                  src="/src/assets/photo/PhotoMovieAvengers.png"
                 />
               </picture>
 
-              <div className="flex flex-col z-10 relative -top-80">
-                <div className="flex flex-col items-center gap-1 text-center px-52">
-                  <h1 className="font-Manrope font-bold text-white text-4xl">
+              <div className="-top-80 relative z-10 flex flex-col">
+                <div className="flex flex-col items-center gap-1 px-52 text-center">
+                  <h1 className="font-Manrope font-bold text-4xl text-white">
                     Avengers : Endgame
                   </h1>
 
@@ -56,28 +54,28 @@ export default function MoviesAndShows() {
                   </span>
 
                   <div className="flex flex-row items-center gap-5 pt-7.5">
-                    <button className="flex flex-row items-center gap-2 px-6 py-3.5 bg-Custom-Red-45 text-white rounded-lg">
-                      <PlayIcon className="w-6 h-6 text-white" />
+                    <button className="flex flex-row items-center gap-2 rounded-lg bg-Custom-Red-45 px-6 py-3.5 text-white">
+                      <PlayIcon className="h-6 w-6 text-white" />
                       Play Now
                     </button>
 
-                    <PlusIcon className="w-14 h-14 text-white p-3.5 bg-Custom-Black-06 rounded-lg border border-Custom-Black-15" />
-                    <HandThumbUpIcon className="w-14 h-14 text-white p-3.5 bg-Custom-Black-06 rounded-lg border border-Custom-Black-15" />
-                    <SpeakerWaveIcon className="w-14 h-14 text-white p-3.5 bg-Custom-Black-06 rounded-lg border border-Custom-Black-15" />
+                    <PlusIcon className="h-14 w-14 rounded-lg border border-Custom-Black-15 bg-Custom-Black-06 p-3.5 text-white" />
+                    <HandThumbUpIcon className="h-14 w-14 rounded-lg border border-Custom-Black-15 bg-Custom-Black-06 p-3.5 text-white" />
+                    <SpeakerWaveIcon className="h-14 w-14 rounded-lg border border-Custom-Black-15 bg-Custom-Black-06 p-3.5 text-white" />
                   </div>
                 </div>
 
-                <div className="flex flex-row justify-between items-center px-12.5 pt-10">
-                  <ArrowLeftIcon className="w-14 h-14 text-white p-3.5 bg-Custom-Black-06 rounded-lg border border-Custom-Black-15" />
+                <div className="flex flex-row items-center justify-between px-12.5 pt-10">
+                  <ArrowLeftIcon className="h-14 w-14 rounded-lg border border-Custom-Black-15 bg-Custom-Black-06 p-3.5 text-white" />
 
                   <div className="flex gap-1 px-3">
-                    <div className="w-5 h-1 text-5xl rounded-lg bg-Custom-Red-45" />
-                    <div className="w-3 h-1 text-5xl rounded-lg bg-Custom-Black-20" />
-                    <div className="w-3 h-1 text-5xl rounded-lg bg-Custom-Black-20" />
-                    <div className="w-3 h-1 text-5xl rounded-lg bg-Custom-Black-20" />
+                    <div className="h-1 w-5 rounded-lg bg-Custom-Red-45 text-5xl" />
+                    <div className="h-1 w-3 rounded-lg bg-Custom-Black-20 text-5xl" />
+                    <div className="h-1 w-3 rounded-lg bg-Custom-Black-20 text-5xl" />
+                    <div className="h-1 w-3 rounded-lg bg-Custom-Black-20 text-5xl" />
                   </div>
 
-                  <ArrowRightIcon className="w-14 h-14 text-white p-3.5 bg-Custom-Black-06 rounded-lg border border-Custom-Black-15" />
+                  <ArrowRightIcon className="h-14 w-14 rounded-lg border border-Custom-Black-15 bg-Custom-Black-06 p-3.5 text-white" />
                 </div>
               </div>
             </div>
@@ -85,13 +83,13 @@ export default function MoviesAndShows() {
 
           <motion.section
             initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
             transition={{ delay: 0.2, duration: 1.5, ease: "easeInOut" }}
+            viewport={{ once: true }}
+            whileInView={{ opacity: 1 }}
           >
             <section className="mb-45">
-              <div className="px-12.5 pt-15 border border-Custom-Black-15 rounded-2xl">
-                <span className="relative -top-17 py-2.5 px-6 bg-Custom-Red-45 rounded-lg font-Manrope font-semibold text-white text-xl">
+              <div className="rounded-2xl border border-Custom-Black-15 px-12.5 pt-15">
+                <span className="-top-17 relative rounded-lg bg-Custom-Red-45 px-6 py-2.5 font-Manrope font-semibold text-white text-xl">
                   Movies
                 </span>
 
@@ -108,13 +106,13 @@ export default function MoviesAndShows() {
 
           <motion.section
             initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
             transition={{ delay: 0.2, duration: 1.5, ease: "easeInOut" }}
+            viewport={{ once: true }}
+            whileInView={{ opacity: 1 }}
           >
             <section className="mb-45">
-              <div className="px-12.5 pt-15 border border-Custom-Black-15 rounded-2xl">
-                <span className="relative -top-17 py-2.5 px-6 bg-Custom-Red-45 rounded-lg font-Manrope font-semibold text-white text-xl">
+              <div className="rounded-2xl border border-Custom-Black-15 px-12.5 pt-15">
+                <span className="-top-17 relative rounded-lg bg-Custom-Red-45 px-6 py-2.5 font-Manrope font-semibold text-white text-xl">
                   Shows
                 </span>
 
@@ -131,15 +129,15 @@ export default function MoviesAndShows() {
 
           <motion.section
             initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
             transition={{ delay: 0.2, duration: 1.5, ease: "easeInOut" }}
+            viewport={{ once: true }}
+            whileInView={{ opacity: 1 }}
           >
             <section className="mb-37.5">
-              <div className="flex flex-row rounded-lg bg-[url('./src/assets/photo/Banner-StreamVibe.png')] bg-cover bg-center bg-no-repeat h-[400px] border border-Custom-Black-15">
+              <div className="flex h-[400px] flex-row rounded-lg border border-Custom-Black-15 bg-[url('./src/assets/photo/Banner-StreamVibe.png')] bg-center bg-cover bg-no-repeat">
                 <div className="flex items-center justify-between gap-20 px-20">
                   <div className="flex flex-col gap-3.5 ">
-                    <h1 className="text-5xl font-Manrope font-bold text-white">
+                    <h1 className="font-Manrope font-bold text-5xl text-white">
                       Start your free trial today!
                     </h1>
 
@@ -150,8 +148,8 @@ export default function MoviesAndShows() {
                   </div>
                 </div>
 
-                <div className="flex-1 flex justify-around items-center">
-                  <button className="px-6 py-4 rounded-lg bg-Custom-Red-45 text-white">
+                <div className="flex flex-1 items-center justify-around">
+                  <button className="rounded-lg bg-Custom-Red-45 px-6 py-4 text-white">
                     Start a Free Trail
                   </button>
                 </div>
@@ -160,10 +158,10 @@ export default function MoviesAndShows() {
           </motion.section>
         </div>
 
-        <footer className="pt-25 bg-Custom-Black-06 px-40">
+        <footer className="bg-Custom-Black-06 px-40 pt-25">
           <div className="grid grid-cols-6 grid-rows-1 gap-7.5 pb-25">
             <div>
-              <h1 className="font-bold font-Manrope text- text-white mb-3">
+              <h1 className="text- mb-3 font-Manrope font-bold text-white">
                 Home
               </h1>
               <div className="flex flex-col gap-3.5">
@@ -175,7 +173,7 @@ export default function MoviesAndShows() {
             </div>
 
             <div>
-              <h1 className="font-bold font-Manrope text- text-white mb-3">
+              <h1 className="text- mb-3 font-Manrope font-bold text-white">
                 Movies
               </h1>
               <div className="flex flex-col gap-3.5">
@@ -189,7 +187,7 @@ export default function MoviesAndShows() {
             </div>
 
             <div>
-              <h1 className="font-bold font-Manrope text- text-white mb-3">
+              <h1 className="text- mb-3 font-Manrope font-bold text-white">
                 Shows
               </h1>
               <div className="flex flex-col gap-3.5">
@@ -203,7 +201,7 @@ export default function MoviesAndShows() {
             </div>
 
             <div>
-              <h1 className="font-bold font-Manrope text- text-white mb-3">
+              <h1 className="text- mb-3 font-Manrope font-bold text-white">
                 Support
               </h1>
               <div>
@@ -212,7 +210,7 @@ export default function MoviesAndShows() {
             </div>
 
             <div>
-              <h1 className="font-bold font-Manrope text- text-white mb-3">
+              <h1 className="text- mb-3 font-Manrope font-bold text-white">
                 Subscription
               </h1>
               <div className="flex flex-col gap-3.5">
@@ -223,25 +221,25 @@ export default function MoviesAndShows() {
 
             <div>
               <div className="gap-3.5">
-                <h1 className="font-bold font-Manrope text- text-white mb-3">
+                <h1 className="text- mb-3 font-Manrope font-bold text-white">
                   Connect With Us
                 </h1>
               </div>
               <div className="flex flex-row gap-3.5">
-                <picture className=" p-4 rounded-lg border border-Custom-Black-15 bg-Custom-Black-10">
+                <picture className=" rounded-lg border border-Custom-Black-15 bg-Custom-Black-10 p-4">
                   <img src="./src/assets/icons/FacebookIcon.svg" />
                 </picture>
-                <picture className=" p-4 rounded-lg border border-Custom-Black-15 bg-Custom-Black-10">
+                <picture className=" rounded-lg border border-Custom-Black-15 bg-Custom-Black-10 p-4">
                   <img src="./src/assets/icons/TwitterIcon.svg" />
                 </picture>
-                <picture className=" p-4 rounded-lg border border-Custom-Black-15 bg-Custom-Black-10">
+                <picture className=" rounded-lg border border-Custom-Black-15 bg-Custom-Black-10 p-4">
                   <img src="./src/assets/icons/LinkedInIcon.svg" />
                 </picture>
               </div>
             </div>
           </div>
 
-          <div className="flex flex-row justify-between pt-4 pb-12.5 border-t border-Custom-Black-15 ">
+          <div className="flex flex-row justify-between border-Custom-Black-15 border-t pt-4 pb-12.5 ">
             <div className="">
               <h1 className="font-Manrope text-Custom-Gray-60">
                 @2023 streamvib, All Rights Reserved
@@ -249,7 +247,7 @@ export default function MoviesAndShows() {
             </div>
 
             <div className="">
-              <div className="flex flex-row gap-3.5 items-center">
+              <div className="flex flex-row items-center gap-3.5">
                 <h1 className="font-Manrope text-Custom-Gray-60">
                   Terms of Use
                 </h1>

@@ -1,5 +1,3 @@
-import { Header } from "@/components/Header/Header";
-import { ReviewCard } from "@/components/ReviewCard";
 import {
   ArrowLeftIcon,
   ArrowRightIcon,
@@ -16,6 +14,8 @@ import {
   Squares2X2Icon,
   StarIcon as StarIconSolid
 } from "@heroicons/react/24/outline";
+import { Header } from "@/components/Header/Header";
+import { ReviewCard } from "@/components/ReviewCard";
 
 export default function MoviesInfo() {
   return (
@@ -24,18 +24,18 @@ export default function MoviesInfo() {
         <Header />
 
         <section className="mb-24.5">
-          <div className="flex-1 h-[800px] rounded-t-xl border-t border-Custom-Black-15 ">
-            <picture className="inset-0 -z-10 mask-b-from-10%">
+          <div className="h-[800px] flex-1 rounded-t-xl border-Custom-Black-15 border-t ">
+            <picture className="-z-10 mask-b-from-10% inset-0">
               <img
+                alt="Kantara Movie Background"
+                className="h-full w-full rounded-t-xl object-cover"
                 src="/src/assets/photo/KantaraMovie.png"
-                alt="image"
-                className="rounded-t-xl w-full h-full object-cover"
               />
             </picture>
 
-            <div className="flex flex-col z-10 relative -top-50">
+            <div className="-top-50 relative z-10 flex flex-col">
               <div className="flex flex-col items-center gap-1 text-center">
-                <h1 className="font-Manrope font-bold text-white text-4xl">
+                <h1 className="font-Manrope font-bold text-4xl text-white">
                   Kantara
                 </h1>
 
@@ -46,14 +46,17 @@ export default function MoviesInfo() {
                 </span>
 
                 <div className="flex flex-row items-center gap-5 pt-7.5">
-                  <button className="flex flex-row items-center gap-2 px-6 py-3.5 bg-Custom-Red-45 text-white rounded-lg">
-                    <PlayIcon className="w-6 h-6 text-white" />
+                  <button
+                    className="flex flex-row items-center gap-2 rounded-lg bg-Custom-Red-45 px-6 py-3.5 text-white"
+                    type="button"
+                  >
+                    <PlayIcon className="h-6 w-6 text-white" />
                     Play Now
                   </button>
 
-                  <PlusIcon className="w-14 h-14 text-white p-3.5 bg-Custom-Black-06 rounded-lg border border-Custom-Black-15" />
-                  <HandThumbUpIcon className="w-14 h-14 text-white p-3.5 bg-Custom-Black-06 rounded-lg border border-Custom-Black-15" />
-                  <SpeakerWaveIcon className="w-14 h-14 text-white p-3.5 bg-Custom-Black-06 rounded-lg border border-Custom-Black-15" />
+                  <PlusIcon className="h-14 w-14 rounded-lg border border-Custom-Black-15 bg-Custom-Black-06 p-3.5 text-white" />
+                  <HandThumbUpIcon className="h-14 w-14 rounded-lg border border-Custom-Black-15 bg-Custom-Black-06 p-3.5 text-white" />
+                  <SpeakerWaveIcon className="h-14 w-14 rounded-lg border border-Custom-Black-15 bg-Custom-Black-06 p-3.5 text-white" />
                 </div>
               </div>
             </div>
@@ -63,7 +66,7 @@ export default function MoviesInfo() {
         <section>
           <div className="grid grid-cols-3 grid-rows-3 gap-4">
             <div className="col-span-2 flex flex-col gap-7.5 ">
-              <div className="flex flex-col p-12.5 rounded-xl border gap-3.5 border-Custom-Black-15 bg-Custom-Black-10">
+              <div className="flex flex-col gap-3.5 rounded-xl border border-Custom-Black-15 bg-Custom-Black-10 p-12.5">
                 <h1 className="font-Manrope font-medium text-Custom-Gray-60">
                   Description
                 </h1>
@@ -75,49 +78,53 @@ export default function MoviesInfo() {
                 </span>
               </div>
 
-              <div className=" col-start-1 row-start-2 flex flex-col p-12.5 rounded-xl border gap-3.5 border-Custom-Black-15 bg-Custom-Black-10">
+              <div className=" col-start-1 row-start-2 flex flex-col gap-3.5 rounded-xl border border-Custom-Black-15 bg-Custom-Black-10 p-12.5">
                 <div className="flex flex-row items-center justify-between">
                   <h1 className="mt-3 font-Manrope font-medium text-Custom-Gray-60">
                     Cast
                   </h1>
-                  <div className="flex flex-row items-center gap-3.5 mt-3">
-                    <ArrowLeftIcon className="w-13 h-13 text-Custom-Gray-60 bg-Custom-Black-08 border border-Custom-Black-15 rounded-full p-3.5" />
-                    <ArrowRightIcon className="w-13 h-13 text-Custom-Gray-60 bg-Custom-Black-08 border border-Custom-Black-15 rounded-full p-3.5" />
+                  <div className="mt-3 flex flex-row items-center gap-3.5">
+                    <ArrowLeftIcon className="h-13 w-13 rounded-full border border-Custom-Black-15 bg-Custom-Black-08 p-3.5 text-Custom-Gray-60" />
+                    <ArrowRightIcon className="h-13 w-13 rounded-full border border-Custom-Black-15 bg-Custom-Black-08 p-3.5 text-Custom-Gray-60" />
                   </div>
                 </div>
 
-                <div className="flex flex-row items-centers justify-between mt-3">
+                <div className="items-centers mt-3 flex flex-row justify-between">
                   {Array.from({ length: 8 }).map((_, i) => (
                     <picture
+                      className="h-25 w-25 justify-between rounded-xl border border-Custom-Black-15"
+                      // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
                       key={i}
-                      className="w-25 h-25 rounded-xl justify-between border border-Custom-Black-15"
                     >
                       <img
-                        src={`/src/assets/photo/Actor1.png`}
-                        alt={`Actor1`}
-                        className="w-full h-full object-cover rounded-xl"
+                        alt={"Actor1"}
+                        className="h-full w-full rounded-xl object-cover"
+                        src={"/src/assets/photo/Actor1.png"}
                       />
                     </picture>
                   ))}
                 </div>
               </div>
 
-              <div className="col-span-2 col-start-1 row-start-3 flex flex-col p-12.5 bg-Custom-Black-10 rounded-lg border border-Custom-Black-15">
+              <div className="col-span-2 col-start-1 row-start-3 flex flex-col rounded-lg border border-Custom-Black-15 bg-Custom-Black-10 p-12.5">
                 <div className="flex flex-row items-center justify-between">
                   <h1 className="font-Manrope font-medium text-Custom-Gray-60">
                     Reviews
                   </h1>
 
-                  <button className="flex flex-row items-center gap-2 px-6 py-3.5 bg-Custom-Red-45 text-white rounded-lg mt-4">
-                    <PlusIcon className="w-6 h-6 text-white" />
+                  <button
+                    className="mt-4 flex flex-row items-center gap-2 rounded-lg bg-Custom-Red-45 px-6 py-3.5 text-white"
+                    type="button"
+                  >
+                    <PlusIcon className="h-6 w-6 text-white" />
                     <span>Add Your Review</span>
                   </button>
                 </div>
 
                 <div className="flex flex-col gap-4 py-10">
                   <ReviewCard
-                    name="John Doe"
                     location="New York"
+                    name="John Doe"
                     rating={4.5}
                     reviewText="This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it."
                   />
@@ -125,11 +132,11 @@ export default function MoviesInfo() {
               </div>
             </div>
 
-            <div className="row-span-1 col-start-3 row-start-1 flex flex-1 flex-col p-12.5 rounded-xl border border-Custom-Black-15 bg-Custom-Black-10">
+            <div className="col-start-3 row-span-1 row-start-1 flex flex-1 flex-col rounded-xl border border-Custom-Black-15 bg-Custom-Black-10 p-12.5">
               <div className="mb-7.5">
                 <div className="flex flex-1 flex-col gap-3.5">
                   <div className="flex flex-row items-center gap-1 ">
-                    <CalendarIcon className="w-6 h-6 text-Custom-Gray-60" />
+                    <CalendarIcon className="h-6 w-6 text-Custom-Gray-60" />
                     <h1 className="font-Manrope font-medium text-Custom-Gray-60">
                       Released Year
                     </h1>
@@ -140,72 +147,72 @@ export default function MoviesInfo() {
                 </div>
               </div>
 
-              <div className="flex flex-col gap-3.5 mb-7.5">
+              <div className="mb-7.5 flex flex-col gap-3.5">
                 <div className="flex flex-row gap-1">
-                  <LanguageIcon className="w-6 h-6 text-Custom-Gray-60" />
+                  <LanguageIcon className="h-6 w-6 text-Custom-Gray-60" />
                   <h1 className="font-Manrope font-medium text-Custom-Gray-60">
                     Available Languages
                   </h1>
                 </div>
 
                 <div className="flex flex-row flex-wrap gap-2.5">
-                  <span className="py-2 px-3.5 rounded-xl bg-Custom-Black-08 border border-Custom-Black-15 font-Manrope font-medium text-white">
+                  <span className="rounded-xl border border-Custom-Black-15 bg-Custom-Black-08 px-3.5 py-2 font-Manrope font-medium text-white">
                     English
                   </span>
-                  <span className="py-2 px-3.5 rounded-xl bg-Custom-Black-08 border border-Custom-Black-15 font-Manrope font-medium text-white">
+                  <span className="rounded-xl border border-Custom-Black-15 bg-Custom-Black-08 px-3.5 py-2 font-Manrope font-medium text-white">
                     Hindi
                   </span>
-                  <span className="py-2 px-3.5 rounded-xl bg-Custom-Black-08 border border-Custom-Black-15 font-Manrope font-medium text-white">
+                  <span className="rounded-xl border border-Custom-Black-15 bg-Custom-Black-08 px-3.5 py-2 font-Manrope font-medium text-white">
                     Tamil
                   </span>
-                  <span className="py-2 px-3.5 rounded-xl bg-Custom-Black-08 border border-Custom-Black-15 font-Manrope font-medium text-white">
+                  <span className="rounded-xl border border-Custom-Black-15 bg-Custom-Black-08 px-3.5 py-2 font-Manrope font-medium text-white">
                     Telegu
                   </span>
-                  <span className="py-2 px-3.5 rounded-xl bg-Custom-Black-08 border border-Custom-Black-15 font-Manrope font-medium text-white">
+                  <span className="rounded-xl border border-Custom-Black-15 bg-Custom-Black-08 px-3.5 py-2 font-Manrope font-medium text-white">
                     Kannada
                   </span>
-                  <span className="py-2 px-3.5 rounded-xl bg-Custom-Black-08 border border-Custom-Black-15 font-Manrope font-medium text-white">
+                  <span className="rounded-xl border border-Custom-Black-15 bg-Custom-Black-08 px-3.5 py-2 font-Manrope font-medium text-white">
                     Espanhol
                   </span>
                 </div>
               </div>
 
-              <div className="flex flex-col gap-3.5 mb-7.5">
-                <div className="flex flex-row items-center gap-1 mt-6">
-                  <StarIconSolid className="w-6 h-6 text-Custom-Gray-60" />
+              <div className="mb-7.5 flex flex-col gap-3.5">
+                <div className="mt-6 flex flex-row items-center gap-1">
+                  <StarIconSolid className="h-6 w-6 text-Custom-Gray-60" />
                   <h1 className="font-Manrope font-medium text-Custom-Gray-60">
                     Ratings
                   </h1>
                 </div>
 
-                <div className="flex flex-1 flex-row items-center gap-3 mt-3">
-                  <div className="flex-1 p-4 rounded-xl bg-Custom-Black-08 border border-Custom-Black-15">
-                    <span className="pl-2.5 font-Manrope text-white font-bold">
+                <div className="mt-3 flex flex-1 flex-row items-center gap-3">
+                  <div className="flex-1 rounded-xl border border-Custom-Black-15 bg-Custom-Black-08 p-4">
+                    <span className="pl-2.5 font-Manrope font-bold text-white">
                       IMDb
                     </span>
-                    <div className="flex flex-row items-center px-2.5 py-1.5 gap-0.5">
-                      <StarIcon className="w-6 h-6 text-Custom-Red-45" />
-                      <StarIcon className="w-6 h-6 text-Custom-Red-45" />
-                      <StarIcon className="w-6 h-6 text-Custom-Red-45" />
-                      <StarIcon className="w-6 h-6 text-Custom-Red-45" />
-                      <StarIcon className="w-6 h-6 text-Custom-Gray-60" />
-                      <span className="text-xl font-Manrope text-Custom-Gray-60">
+                    <div className="flex flex-row items-center gap-0.5 px-2.5 py-1.5">
+                      <StarIcon className="h-6 w-6 text-Custom-Red-45" />
+                      <StarIcon className="h-6 w-6 text-Custom-Red-45" />
+                      <StarIcon className="h-6 w-6 text-Custom-Red-45" />
+                      <StarIcon className="h-6 w-6 text-Custom-Red-45" />
+                      <StarIcon className="h-6 w-6 text-Custom-Gray-60" />
+                      <span className="font-Manrope text-Custom-Gray-60 text-xl">
                         4.5
                       </span>
                     </div>
                   </div>
 
-                  <div className="flex-1 p-4 rounded-xl bg-Custom-Black-08 border border-Custom-Black-15">
-                    <span className="pl-2.5 font-Manrope text-white font-bold">
+                  <div className="flex-1 rounded-xl border border-Custom-Black-15 bg-Custom-Black-08 p-4">
+                    <span className="pl-2.5 font-Manrope font-bold text-white">
                       Streamvibe
                     </span>
-                    <div className="flex flex-row items-center px-2.5 py-1.5 gap-0.5">
-                      <StarIcon className="w-6 h-6 text-Custom-Red-45" />
-                      <StarIcon className="w-6 h-6 text-Custom-Red-45" />
-                      <StarIcon className="w-6 h-6 text-Custom-Red-45" />
-                      <StarIcon className="w-6 h-6 text-Custom-Red-45" />
-                      <StarIcon className="w-6 h-6 text-Custom-Red-45" />
-                      <span className="text-xl font-Manrope text-Custom-Gray-60">
+                    <div className="flex flex-row items-center gap-0.5 px-2.5 py-1.5">
+                      <StarIcon className="h-6 w-6 text-Custom-Red-45" />
+                      <StarIcon className="h-6 w-6 text-Custom-Red-45" />
+                      <StarIcon className="h-6 w-6 text-Custom-Red-45" />
+                      <StarIcon className="h-6 w-6 text-Custom-Red-45" />
+                      <StarIcon className="h-6 w-6 text-Custom-Red-45" />
+                      <span className="font-Manrope text-Custom-Gray-60 text-xl">
                         5.0
                       </span>
                     </div>
@@ -213,36 +220,36 @@ export default function MoviesInfo() {
                 </div>
               </div>
 
-              <div className="flex flex-col gap-3.5 mb-7.5">
-                <div className="flex flex-row items-center gap-1 mt-6">
-                  <Squares2X2Icon className="w-6 h-6 text-Custom-Gray-60" />
+              <div className="mb-7.5 flex flex-col gap-3.5">
+                <div className="mt-6 flex flex-row items-center gap-1">
+                  <Squares2X2Icon className="h-6 w-6 text-Custom-Gray-60" />
                   <h1 className="font-Manrope font-medium text-Custom-Gray-60">
                     Genres
                   </h1>
                 </div>
 
-                <div className="flex flex-row items-center gap-2 mt-2">
-                  <span className="py-2 px-3.5 rounded-xl bg-Custom-Black-08 border border-Custom-Black-15 font-Manrope font-medium text-white">
+                <div className="mt-2 flex flex-row items-center gap-2">
+                  <span className="rounded-xl border border-Custom-Black-15 bg-Custom-Black-08 px-3.5 py-2 font-Manrope font-medium text-white">
                     Action
                   </span>
-                  <span className="py-2 px-3.5 rounded-xl bg-Custom-Black-08 border border-Custom-Black-15 font-Manrope font-medium text-white">
+                  <span className="rounded-xl border border-Custom-Black-15 bg-Custom-Black-08 px-3.5 py-2 font-Manrope font-medium text-white">
                     Adventure
                   </span>
                 </div>
               </div>
 
-              <div className="flex flex-col gap-3.5 mb-7.5">
+              <div className="mb-7.5 flex flex-col gap-3.5">
                 <h1 className="font-Manrope font-medium text-Custom-Gray-60">
                   Director
                 </h1>
 
-                <div className="p-3.5 rounded-xl bg-Custom-Black-08 border border-Custom-Black-15">
+                <div className="rounded-xl border border-Custom-Black-15 bg-Custom-Black-08 p-3.5">
                   <div className="flex flex-row items-center gap-2">
-                    <picture className="w-15 h-15 rounded-xl justify-between border border-Custom-Black-15">
+                    <picture className="h-15 w-15 justify-between rounded-xl border border-Custom-Black-15">
                       <img
-                        src={`/src/assets/photo/Actor1.png`}
-                        alt={`Actor1`}
-                        className="w-full h-full object-cover rounded-xl"
+                        alt={"Actor1"}
+                        className="h-full w-full rounded-xl object-cover"
+                        src={"/src/assets/photo/Actor1.png"}
                       />
                     </picture>
                     <div className="flex flex-col items-start">
@@ -257,18 +264,18 @@ export default function MoviesInfo() {
                 </div>
               </div>
 
-              <div className="flex flex-col gap-3.5 mb-7.5">
+              <div className="mb-7.5 flex flex-col gap-3.5">
                 <h1 className="font-Manrope font-medium text-Custom-Gray-60">
                   Music
                 </h1>
 
-                <div className="p-3.5 rounded-xl bg-Custom-Black-08 border border-Custom-Black-15">
+                <div className="rounded-xl border border-Custom-Black-15 bg-Custom-Black-08 p-3.5">
                   <div className="flex flex-row items-center gap-2">
-                    <picture className="w-15 h-15 rounded-xl justify-between border border-Custom-Black-15">
+                    <picture className="h-15 w-15 justify-between rounded-xl border border-Custom-Black-15">
                       <img
-                        src={`/src/assets/photo/ProductMusic.png`}
-                        alt={`Actor1`}
-                        className="w-full h-full object-cover rounded-xl"
+                        alt={"Actor1"}
+                        className="h-full w-full rounded-xl object-cover"
+                        src={"/src/assets/photo/ProductMusic.png"}
                       />
                     </picture>
                     <div className="flex flex-col items-start">
@@ -287,10 +294,10 @@ export default function MoviesInfo() {
         </section>
 
         <section className="my-37.5">
-          <div className="flex flex-row rounded-lg bg-[url('./assets/photo/Banner-StreamVibe.png')] bg-cover bg-center bg-no-repeat h-[400px] border border-Custom-Black-15">
+          <div className="flex h-[400px] flex-row rounded-lg border border-Custom-Black-15 bg-[url('./assets/photo/Banner-StreamVibe.png')] bg-center bg-cover bg-no-repeat">
             <div className="flex items-center justify-between gap-20 px-20">
               <div className="flex flex-col gap-3.5 ">
-                <h1 className="text-5xl font-Manrope font-bold text-white">
+                <h1 className="font-Manrope font-bold text-5xl text-white">
                   Start your free trial today!
                 </h1>
 
@@ -301,19 +308,22 @@ export default function MoviesInfo() {
               </div>
             </div>
 
-            <div className="flex-1 flex justify-around items-center">
-              <button className="px-6 py-4 rounded-lg bg-Custom-Red-45 text-white">
-                Start a Free Trail
+            <div className="flex flex-1 items-center justify-around">
+              <button
+                className="rounded-lg bg-Custom-Red-45 px-6 py-4 text-white"
+                type="button"
+              >
+                Start a Free Trial
               </button>
             </div>
           </div>
         </section>
       </div>
 
-      <footer className="pt-25 bg-Custom-Black-06 px-40">
+      <footer className="bg-Custom-Black-06 px-40 pt-25">
         <div className="grid grid-cols-6 grid-rows-1 gap-7.5 pb-25">
           <div>
-            <h1 className="font-bold font-Manrope text- text-white mb-3">
+            <h1 className="text- mb-3 font-Manrope font-bold text-white">
               Home
             </h1>
             <div className="flex flex-col gap-3.5">
@@ -325,7 +335,7 @@ export default function MoviesInfo() {
           </div>
 
           <div>
-            <h1 className="font-bold font-Manrope text- text-white mb-3">
+            <h1 className="text- mb-3 font-Manrope font-bold text-white">
               Movies
             </h1>
             <div className="flex flex-col gap-3.5">
@@ -337,7 +347,7 @@ export default function MoviesInfo() {
           </div>
 
           <div>
-            <h1 className="font-bold font-Manrope text- text-white mb-3">
+            <h1 className="text- mb-3 font-Manrope font-bold text-white">
               Shows
             </h1>
             <div className="flex flex-col gap-3.5">
@@ -349,7 +359,7 @@ export default function MoviesInfo() {
           </div>
 
           <div>
-            <h1 className="font-bold font-Manrope text- text-white mb-3">
+            <h1 className="text- mb-3 font-Manrope font-bold text-white">
               Support
             </h1>
             <div>
@@ -358,7 +368,7 @@ export default function MoviesInfo() {
           </div>
 
           <div>
-            <h1 className="font-bold font-Manrope text- text-white mb-3">
+            <h1 className="text- mb-3 font-Manrope font-bold text-white">
               Subscription
             </h1>
             <div className="flex flex-col gap-3.5">
@@ -369,25 +379,34 @@ export default function MoviesInfo() {
 
           <div>
             <div className="gap-3.5">
-              <h1 className="font-bold font-Manrope text- text-white mb-3">
+              <h1 className="text- mb-3 font-Manrope font-bold text-white">
                 Connect With Us
               </h1>
             </div>
             <div className="flex flex-row gap-3.5">
-              <picture className=" p-4 rounded-lg border border-Custom-Black-15 bg-Custom-Black-10">
-                <img src="./src/assets/icons/FacebookIcon.svg" />
+              <picture className=" rounded-lg border border-Custom-Black-15 bg-Custom-Black-10 p-4">
+                <img
+                  alt="Facebook Icon"
+                  src="./src/assets/icons/FacebookIcon.svg"
+                />
               </picture>
-              <picture className=" p-4 rounded-lg border border-Custom-Black-15 bg-Custom-Black-10">
-                <img src="./src/assets/icons/TwitterIcon.svg" />
+              <picture className=" rounded-lg border border-Custom-Black-15 bg-Custom-Black-10 p-4">
+                <img
+                  alt="Twitter Icon"
+                  src="./src/assets/icons/TwitterIcon.svg"
+                />
               </picture>
-              <picture className=" p-4 rounded-lg border border-Custom-Black-15 bg-Custom-Black-10">
-                <img src="./src/assets/icons/LinkedInIcon.svg" />
+              <picture className=" rounded-lg border border-Custom-Black-15 bg-Custom-Black-10 p-4">
+                <img
+                  alt="LinkedIn Icon"
+                  src="./src/assets/icons/LinkedInIcon.svg"
+                />
               </picture>
             </div>
           </div>
         </div>
 
-        <div className="flex flex-row justify-between pt-4 pb-12.5 border-t border-Custom-Black-15 ">
+        <div className="flex flex-row justify-between border-Custom-Black-15 border-t pt-4 pb-12.5 ">
           <div className="">
             <h1 className="font-Manrope text-Custom-Gray-60">
               @2023 streamvib, All Rights Reserved
@@ -395,7 +414,7 @@ export default function MoviesInfo() {
           </div>
 
           <div className="">
-            <div className="flex flex-row gap-3.5 items-center">
+            <div className="flex flex-row items-center gap-3.5">
               <h1 className="font-Manrope text-Custom-Gray-60">Terms of Use</h1>
 
               <div className="h-4 w-px bg-Custom-Gray-60/50" />
