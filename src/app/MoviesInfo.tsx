@@ -24,12 +24,12 @@ export default function MoviesInfo() {
         <Header />
 
         <section className="mb-24.5">
-          <div className="flex-1 w-full h-[800px] rounded-t-xl border-t border-Custom-Black-15 ">
+          <div className="flex-1 h-[800px] rounded-t-xl border-t border-Custom-Black-15 ">
             <picture className="inset-0 -z-10 mask-b-from-10%">
               <img
                 src="/src/assets/photo/KantaraMovie.png"
                 alt="image"
-                className="rounded-t-xl"
+                className="rounded-t-xl w-full h-full object-cover"
               />
             </picture>
 
