@@ -13,6 +13,7 @@ import {
   Squares2X2Icon,
   StarIcon as StarIconSolid
 } from "@heroicons/react/24/outline";
+import { Accordion } from "@/components/Accordion";
 import { Header } from "@/components/Header/Header";
 import { ReviewCard } from "@/components/ReviewCard";
 
@@ -65,6 +66,13 @@ export default function ShowInfo() {
         <section>
           <div className="grid grid-cols-3 grid-rows-4 gap-4">
             <div className="col-span-2 flex flex-col gap-7.5 ">
+              <div className="col-span-2 row-span-1 row-start-1 rounded-xl border border-Custom-Black-15 bg-Custom-Black-10 p-12.5">
+                <h1 className="font-Manrope font-bold text-4xl text-white">
+                  Seasons and Episodes
+                </h1>
+                <Accordion />
+              </div>
+
               <div className="flex flex-col gap-3.5 rounded-xl border border-Custom-Black-15 bg-Custom-Black-10 p-12.5">
                 <h1 className="font-Manrope font-medium text-Custom-Gray-60">
                   Description
