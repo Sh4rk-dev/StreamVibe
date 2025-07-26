@@ -19,7 +19,7 @@ import { Header } from "@/components/Header/Header";
 
 export default function MoviesAndShows() {
   return (
-    <>
+    <div>
       <motion.div
         initial={{ opacity: 0 }}
         transition={{ delay: 0.2, duration: 1.5, ease: "easeInOut" }}
@@ -33,7 +33,7 @@ export default function MoviesAndShows() {
             <div className="h-[800px] w-full flex-1 rounded-t-xl border-Custom-Black-15 border-t ">
               <picture className="-z-10 mask-b-from-10% inset-0">
                 <img
-                  alt="image"
+                  alt="Avengers: Endgame"
                   className="rounded-t-xl"
                   src="/src/assets/photo/PhotoMovieAvengers.png"
                 />
@@ -54,7 +54,10 @@ export default function MoviesAndShows() {
                   </span>
 
                   <div className="flex flex-row items-center gap-5 pt-7.5">
-                    <button className="flex flex-row items-center gap-2 rounded-lg bg-Custom-Red-45 px-6 py-3.5 text-white">
+                    <button
+                      className="flex flex-row items-center gap-2 rounded-lg bg-Custom-Red-45 px-6 py-3.5 text-white"
+                      type="button"
+                    >
                       <PlayIcon className="h-6 w-6 text-white" />
                       Play Now
                     </button>
@@ -149,7 +152,10 @@ export default function MoviesAndShows() {
                 </div>
 
                 <div className="flex flex-1 items-center justify-around">
-                  <button className="rounded-lg bg-Custom-Red-45 px-6 py-4 text-white">
+                  <button
+                    className="rounded-lg bg-Custom-Red-45 px-6 py-4 text-white"
+                    type="button"
+                  >
                     Start a Free Trail
                   </button>
                 </div>
@@ -227,13 +233,19 @@ export default function MoviesAndShows() {
               </div>
               <div className="flex flex-row gap-3.5">
                 <picture className=" rounded-lg border border-Custom-Black-15 bg-Custom-Black-10 p-4">
-                  <img src="./src/assets/icons/FacebookIcon.svg" />
+                  <img
+                    alt="Facebook"
+                    src="./src/assets/icons/FacebookIcon.svg"
+                  />
                 </picture>
                 <picture className=" rounded-lg border border-Custom-Black-15 bg-Custom-Black-10 p-4">
-                  <img src="./src/assets/icons/TwitterIcon.svg" />
+                  <img alt="Twitter" src="./src/assets/icons/TwitterIcon.svg" />
                 </picture>
                 <picture className=" rounded-lg border border-Custom-Black-15 bg-Custom-Black-10 p-4">
-                  <img src="./src/assets/icons/LinkedInIcon.svg" />
+                  <img
+                    alt="LinkedIn"
+                    src="./src/assets/icons/LinkedInIcon.svg"
+                  />
                 </picture>
               </div>
             </div>
@@ -268,6 +280,6 @@ export default function MoviesAndShows() {
           </div>
         </footer>
       </motion.div>
-    </>
+    </div>
   );
 }

@@ -23,7 +23,7 @@ function NavItem({ title, isActive }: NavItemProps) {
     <Link to={slug}>
       <li
         className={`list-none ${
-          isActive ? "px-5 py-3 bg-Custom-Black-10 rounded-lg" : ""
+          isActive ? "rounded-lg bg-Custom-Black-10 px-5 py-3" : ""
         }`}
       >
         {title}

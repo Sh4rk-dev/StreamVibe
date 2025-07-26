@@ -22,23 +22,24 @@ export function ReviewCard({
       <div className="flex flex-row gap-4">
         {Array.from({ length: 2 }).map((_, i) => (
           <div
+            className="flex flex-col rounded-xl border border-Custom-Black-15 bg-Custom-Black-06 p-10"
+            // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
             key={i}
-            className="flex flex-col p-10 bg-Custom-Black-06 rounded-xl border border-Custom-Black-15"
           >
-            <div className="flex flex-row items-center justify-between mb-4">
+            <div className="mb-4 flex flex-row items-center justify-between">
               <div>
-                <h2 className="font-semibold font-Manrope text-white">
+                <h2 className="font-Manrope font-semibold text-white">
                   {name}
                 </h2>
                 <span className="text-Custom-Gray-60">({location})</span>
               </div>
-              <div className="flex flex-row justify-between items-center">
-                <div className="flex flex-row items-center px-2.5 py-1.5 gap-0.5 rounded-full bg-Custom-Black-08 border border-Custom-Black-15">
-                  <StarIcon className="w-4 h-4 text-Custom-Red-45" />
-                  <StarIcon className="w-4 h-4 text-Custom-Red-45" />
-                  <StarIcon className="w-4 h-4 text-Custom-Red-45" />
-                  <StarIcon className="w-4 h-4 text-Custom-Red-45" />
-                  <StarIcon className="w-4 h-4 text-Custom-Gray-60" />
+              <div className="flex flex-row items-center justify-between">
+                <div className="flex flex-row items-center gap-0.5 rounded-full border border-Custom-Black-15 bg-Custom-Black-08 px-2.5 py-1.5">
+                  <StarIcon className="h-4 w-4 text-Custom-Red-45" />
+                  <StarIcon className="h-4 w-4 text-Custom-Red-45" />
+                  <StarIcon className="h-4 w-4 text-Custom-Red-45" />
+                  <StarIcon className="h-4 w-4 text-Custom-Red-45" />
+                  <StarIcon className="h-4 w-4 text-Custom-Gray-60" />
                   <span className="font-Manrope text-Custom-Gray-60">
                     {rating}
                   </span>
@@ -52,19 +53,19 @@ export function ReviewCard({
       </div>
 
       <div className="flex flex-row items-center p-4">
-        <button className="bg-Custom-Black-10 rounded-lg p-3">
-          <ArrowLeftIcon className="w-13 h-13 text-Custom-Gray-60 bg-Custom-Black-08 border border-Custom-Black-15 rounded-full p-3.5" />
+        <button className="rounded-lg bg-Custom-Black-10 p-3" type="button">
+          <ArrowLeftIcon className="h-13 w-13 rounded-full border border-Custom-Black-15 bg-Custom-Black-08 p-3.5 text-Custom-Gray-60" />
         </button>
 
         <div className="flex gap-1 px-3">
-          <div className="w-5 h-1 text-5xl rounded-lg bg-Custom-Red-45" />
-          <div className="w-3 h-1 text-5xl rounded-lg bg-Custom-Black-20" />
-          <div className="w-3 h-1 text-5xl rounded-lg bg-Custom-Black-20" />
-          <div className="w-3 h-1 text-5xl rounded-lg bg-Custom-Black-20" />
+          <div className="h-1 w-5 rounded-lg bg-Custom-Red-45 text-5xl" />
+          <div className="h-1 w-3 rounded-lg bg-Custom-Black-20 text-5xl" />
+          <div className="h-1 w-3 rounded-lg bg-Custom-Black-20 text-5xl" />
+          <div className="h-1 w-3 rounded-lg bg-Custom-Black-20 text-5xl" />
         </div>
 
-        <button className="bg-Custom-Black-10 rounded-lg p-3">
-          <ArrowRightIcon className="w-13 h-13 text-Custom-Gray-60 bg-Custom-Black-08 border border-Custom-Black-15 rounded-full p-3.5" />
+        <button className="rounded-lg bg-Custom-Black-10 p-3" type="button">
+          <ArrowRightIcon className="h-13 w-13 rounded-full border border-Custom-Black-15 bg-Custom-Black-08 p-3.5 text-Custom-Gray-60" />
         </button>
       </div>
     </div>

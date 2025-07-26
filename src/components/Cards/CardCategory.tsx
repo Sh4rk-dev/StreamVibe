@@ -2,15 +2,15 @@ import { ArrowRightIcon } from "@heroicons/react/16/solid";
 
 export function CardCategory() {
   return (
-    <div className="rounded-lg bg-Custom-Black-10 border border-Custom-Black-15">
+    <div className="rounded-lg border border-Custom-Black-15 bg-Custom-Black-10">
       <div className="p-5">
         <picture className="mx-auto">
-          <img src="./src/assets/photo/Category.png" alt="image" />
+          <img alt="Image: Category" src="./src/assets/photo/Category.png" />
         </picture>
 
         <div className="flex flex-row justify-between">
-          <h2 className="text-Custom-Gray-75 font-bold font-Manrope">Action</h2>
-          <ArrowRightIcon className="w-6 h-6 text-Custom-Gray-75 " />
+          <h2 className="font-Manrope font-bold text-Custom-Gray-75">Action</h2>
+          <ArrowRightIcon className="h-6 w-6 text-Custom-Gray-75 " />
         </div>
       </div>
     </div>

@@ -1,33 +1,34 @@
 import { ClockIcon, FilmIcon } from "@heroicons/react/16/solid";
 
 export function CardNewReleasedShows() {
-  {
-    return (
-      <div className="rounded-xl bg-Custom-Black-10 border border-Custom-Black-15">
-        <div className="p-5">
-          <picture className="mx-auto">
-            <img src="./src/assets/photo/NewReleasedShows.png" alt="image" />
-          </picture>
+  return (
+    <div className="rounded-xl border border-Custom-Black-15 bg-Custom-Black-10">
+      <div className="p-5">
+        <picture className="mx-auto">
+          <img
+            alt="Image: New Released Shows"
+            src="./src/assets/photo/NewReleasedShows.png"
+          />
+        </picture>
 
-          <div className="flex flex-row justify-between items-center pt-5">
-            <div className="flex flex-row items-center px-2.5 py-1.5 gap-1 rounded-full bg-Custom-Black-08 border border-Custom-Black-15">
-              <ClockIcon className="w-3 h-3 text-Custom-Gray-60" />
-              <span className="font-Manrope text-sm text-Custom-Gray-60">
-                12h 23min
+        <div className="flex flex-row items-center justify-between pt-5">
+          <div className="flex flex-row items-center gap-1 rounded-full border border-Custom-Black-15 bg-Custom-Black-08 px-2.5 py-1.5">
+            <ClockIcon className="h-3 w-3 text-Custom-Gray-60" />
+            <span className="font-Manrope text-Custom-Gray-60 text-sm">
+              12h 23min
+            </span>
+          </div>
+
+          <div className="flex flex-row items-center justify-between">
+            <div className="flex flex-row items-center gap-1 rounded-full border border-Custom-Black-15 bg-Custom-Black-08 px-2.5 py-1.5">
+              <FilmIcon className="h-3 w-3 text-Custom-Gray-60" />
+              <span className="font-Manrope text-Custom-Gray-60 text-sm">
+                5 Season
               </span>
-            </div>
-
-            <div className="flex flex-row justify-between items-center">
-              <div className="flex flex-row items-center px-2.5 py-1.5 gap-1 rounded-full bg-Custom-Black-08 border border-Custom-Black-15">
-                <FilmIcon className="w-3 h-3 text-Custom-Gray-60" />
-                <span className="font-Manrope text-sm text-Custom-Gray-60">
-                  5 Season
-                </span>
-              </div>
             </div>
           </div>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
