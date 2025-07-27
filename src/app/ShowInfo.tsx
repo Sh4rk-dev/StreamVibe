@@ -13,7 +13,11 @@ import {
   Squares2X2Icon,
   StarIcon as StarIconSolid
 } from "@heroicons/react/24/outline";
-import { Accordion } from "@/components/Accordion";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionContentRoot
+} from "@/components/Accordion";
 import { Header } from "@/components/Header/Header";
 import { ReviewCard } from "@/components/ReviewCard";
 
@@ -70,7 +74,30 @@ export default function ShowInfo() {
                 <h1 className="font-Manrope font-bold text-4xl text-white">
                   Seasons and Episodes
                 </h1>
-                <Accordion />
+                <div className="mt-6 flex flex-col gap-3.5">
+                  <Accordion subtitle="8 Episodes" title="Season 1">
+                    <AccordionContentRoot>
+                      <AccordionContent
+                        description="A young boy vanishes, and a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl."
+                        duration="47 min"
+                        position="01"
+                        title="Chapter One: The Vanishing of Will Byers"
+                      />
+                      <AccordionContent
+                        description="A young boy vanishes, and a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl."
+                        duration="47 min"
+                        position="01"
+                        title="Chapter One: The Vanishing of Will Byers"
+                      />
+                      <AccordionContent
+                        description="A young boy vanishes, and a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl."
+                        duration="47 min"
+                        position="01"
+                        title="Chapter One: The Vanishing of Will Byers"
+                      />
+                    </AccordionContentRoot>
+                  </Accordion>
+                </div>
               </div>
 
               <div className="flex flex-col gap-3.5 rounded-xl border border-Custom-Black-15 bg-Custom-Black-10 p-12.5">
