@@ -57,7 +57,7 @@ export function Accordion({ children, subtitle, title }: AccordionProps) {
 }
 
 export function AccordionContentRoot({ children }: AccordionContentRootProps) {
-  return <div className="grid grid-cols-1 grid-rows-5 ">{children}</div>;
+  return <div>{children}</div>;
 }
 
 export function AccordionContent({
@@ -98,14 +98,3 @@ export function AccordionContent({
     </div>
   );
 }
-
-// export function Accordion() {
-//   const [isOpen, setIsOpen] = React.useState(false);
-
-//   return (
-//     <div className="w-full">
-//       <AccordionRoot />
-//       {isOpen && <AccordionContent />}
-//     </div>
-//   );
-// }

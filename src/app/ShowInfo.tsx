@@ -95,6 +95,60 @@ export default function ShowInfo() {
                         position="01"
                         title="Chapter One: The Vanishing of Will Byers"
                       />
+                      <AccordionContent
+                        description="A young boy vanishes, and a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl."
+                        duration="47 min"
+                        position="01"
+                        title="Chapter One: The Vanishing of Will Byers"
+                      />
+                      <AccordionContent
+                        description="A young boy vanishes, and a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl."
+                        duration="47 min"
+                        position="01"
+                        title="Chapter One: The Vanishing of Will Byers"
+                      />
+                      <AccordionContent
+                        description="A young boy vanishes, and a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl."
+                        duration="47 min"
+                        position="01"
+                        title="Chapter One: The Vanishing of Will Byers"
+                      />
+                      <AccordionContent
+                        description="A young boy vanishes, and a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl."
+                        duration="47 min"
+                        position="01"
+                        title="Chapter One: The Vanishing of Will Byers"
+                      />
+                      <AccordionContent
+                        description="A young boy vanishes, and a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl."
+                        duration="47 min"
+                        position="01"
+                        title="Chapter One: The Vanishing of Will Byers"
+                      />
+                      <AccordionContent
+                        description="A young boy vanishes, and a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl."
+                        duration="47 min"
+                        position="01"
+                        title="Chapter One: The Vanishing of Will Byers"
+                      />
+                      <AccordionContent
+                        description="A young boy vanishes, and a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl."
+                        duration="47 min"
+                        position="01"
+                        title="Chapter One: The Vanishing of Will Byers"
+                      />
+                      <AccordionContent
+                        description="A young boy vanishes, and a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl."
+                        duration="47 min"
+                        position="01"
+                        title="Chapter One: The Vanishing of Will Byers"
+                      />
+                      <AccordionContent
+                        description="A young boy vanishes, and a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl."
+                        duration="47 min"
+                        position="01"
+                        title="Chapter One: The Vanishing of Will Byers"
+                      />
                     </AccordionContentRoot>
                   </Accordion>
                 </div>
