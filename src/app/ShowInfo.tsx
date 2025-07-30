@@ -68,7 +68,7 @@ export default function ShowInfo() {
         </section>
 
         <section>
-          <div className="grid grid-cols-3 grid-rows-4 gap-4">
+          <div className="grid grid-cols-3 gap-4">
             <div className="col-span-2 flex flex-col gap-7.5 ">
               <div className="col-span-2 row-span-1 row-start-1 rounded-xl border border-Custom-Black-15 bg-Custom-Black-10 p-12.5">
                 <h1 className="font-Manrope font-bold text-4xl text-white">
@@ -83,66 +83,20 @@ export default function ShowInfo() {
                         position="01"
                         title="Chapter One: The Vanishing of Will Byers"
                       />
+                    </AccordionContentRoot>
+                  </Accordion>
+                  <Accordion subtitle="8 Episodes" title="Season 1">
+                    <AccordionContentRoot>
                       <AccordionContent
                         description="A young boy vanishes, and a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl."
                         duration="47 min"
                         position="01"
                         title="Chapter One: The Vanishing of Will Byers"
                       />
-                      <AccordionContent
-                        description="A young boy vanishes, and a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl."
-                        duration="47 min"
-                        position="01"
-                        title="Chapter One: The Vanishing of Will Byers"
-                      />
-                      <AccordionContent
-                        description="A young boy vanishes, and a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl."
-                        duration="47 min"
-                        position="01"
-                        title="Chapter One: The Vanishing of Will Byers"
-                      />
-                      <AccordionContent
-                        description="A young boy vanishes, and a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl."
-                        duration="47 min"
-                        position="01"
-                        title="Chapter One: The Vanishing of Will Byers"
-                      />
-                      <AccordionContent
-                        description="A young boy vanishes, and a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl."
-                        duration="47 min"
-                        position="01"
-                        title="Chapter One: The Vanishing of Will Byers"
-                      />
-                      <AccordionContent
-                        description="A young boy vanishes, and a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl."
-                        duration="47 min"
-                        position="01"
-                        title="Chapter One: The Vanishing of Will Byers"
-                      />
-                      <AccordionContent
-                        description="A young boy vanishes, and a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl."
-                        duration="47 min"
-                        position="01"
-                        title="Chapter One: The Vanishing of Will Byers"
-                      />
-                      <AccordionContent
-                        description="A young boy vanishes, and a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl."
-                        duration="47 min"
-                        position="01"
-                        title="Chapter One: The Vanishing of Will Byers"
-                      />
-                      <AccordionContent
-                        description="A young boy vanishes, and a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl."
-                        duration="47 min"
-                        position="01"
-                        title="Chapter One: The Vanishing of Will Byers"
-                      />
-                      <AccordionContent
-                        description="A young boy vanishes, and a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl."
-                        duration="47 min"
-                        position="01"
-                        title="Chapter One: The Vanishing of Will Byers"
-                      />
+                    </AccordionContentRoot>
+                  </Accordion>
+                  <Accordion subtitle="8 Episodes" title="Season 1">
+                    <AccordionContentRoot>
                       <AccordionContent
                         description="A young boy vanishes, and a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl."
                         duration="47 min"
@@ -219,7 +173,7 @@ export default function ShowInfo() {
               </div>
             </div>
 
-            <div className="col-start-3 row-span-1 row-start-1 flex flex-1 flex-col rounded-xl border border-Custom-Black-15 bg-Custom-Black-10 p-12.5">
+            <div className="col-start-3 row-span-1 row-start-1 flex h-fit flex-1 flex-col rounded-xl border border-Custom-Black-15 bg-Custom-Black-10 p-12.5">
               <div className="mb-7.5">
                 <div className="flex flex-1 flex-col gap-3.5">
                   <div className="flex flex-row items-center gap-1 ">

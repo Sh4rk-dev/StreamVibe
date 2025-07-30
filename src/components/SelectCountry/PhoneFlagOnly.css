@@ -1,0 +1,19 @@
+/* Oculta o campo de input */
+.hide-phone-input {
+  display: none;
+}
+
+/* Ajusta botão da bandeira */
+.flag-button-only {
+  background-color: transparent;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Ajusta container para encaixar bem */
+.flag-container {
+  display: inline-flex;
+  align-items: center;
+}

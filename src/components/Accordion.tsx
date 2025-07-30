@@ -23,12 +23,12 @@ export function Accordion({ children, subtitle, title }: AccordionProps) {
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
-    <button
-      className="w-full cursor-pointer "
-      onClick={() => setIsOpen(!isOpen)}
-      type="button"
-    >
-      <div className="flex flex-1 flex-col items-center justify-between rounded-xl border border-Custom-Black-15 bg-Custom-Black-06 p-8">
+    <div className="flex flex-1 flex-col items-center justify-between rounded-xl border border-Custom-Black-15 bg-Custom-Black-06 p-8">
+      <button
+        className="w-full cursor-pointer "
+        onClick={() => setIsOpen(!isOpen)}
+        type="button"
+      >
         <div className="flex w-full flex-row items-center justify-between">
           <div className="flex flex-row items-center justify-between gap-2.5">
             <h1 className="font-Manrope font-medium text-2xl text-white">
@@ -46,13 +46,14 @@ export function Accordion({ children, subtitle, title }: AccordionProps) {
             )}
           </div>
         </div>
-        {isOpen && (
-          <div className="mt-4 w-full transition-all duration-300">
-            <AccordionContentRoot>{children}</AccordionContentRoot>
-          </div>
-        )}
-      </div>
-    </button>
+      </button>
+
+      {isOpen && (
+        <div className="mt-4 w-full transition-all duration-300">
+          <AccordionContentRoot>{children}</AccordionContentRoot>
+        </div>
+      )}
+    </div>
   );
 }
 
