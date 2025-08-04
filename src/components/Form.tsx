@@ -1,4 +1,6 @@
+import { CheckBox } from "@/components/CheckBox";
 import { InputText } from "@/components/Input";
+import { InputCountry } from "@/components/InputCountry";
 
 export function Form() {
   return (
@@ -32,7 +34,7 @@ export function Form() {
           type="email"
         />
 
-        <InputText
+        <InputCountry
           id="phone"
           label="Phone Number"
           name="phone"
@@ -51,6 +53,22 @@ export function Form() {
           required
           type="textarea"
         />
+      </div>
+
+      <div className="flex mt-10 flex-row justify-between items-center">
+        <div className="flex flex-row gap-1 items-center">
+          <CheckBox />
+          <span className="font-Manrope font-light text-sm text-Custom-Gray-60">
+            I agree with Terms of Use and Privacy Policy
+          </span>
+        </div>
+
+        <button
+          className="flex items-center justify-center rounded-lg bg-Custom-Red-45 py-4 px-2 font-Manrope font-semibold text-white"
+          type="submit"
+        >
+          Send Message
+        </button>
       </div>
     </form>
   );

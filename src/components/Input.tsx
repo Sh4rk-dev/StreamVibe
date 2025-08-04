@@ -15,7 +15,7 @@ export function InputText({
   name,
   type,
   required,
-  placeholder
+  placeholder,
 }: InputTextProps) {
   return (
     <div className="flex flex-1 flex-col space-y-2">
@@ -28,7 +28,7 @@ export function InputText({
 
       {type === "textarea" ? (
         <textarea
-          className="min-h-[160px] w-full rounded-md border border-Custom-Black-15 bg-Custom-Black-08 p-5 text-white shadow-sm"
+          className="min-h-[160px] max-h-[300px] w-full rounded-md border border-Custom-Black-15 bg-Custom-Black-08 p-5 text-white shadow-sm"
           id={id}
           name={name}
           placeholder={placeholder}

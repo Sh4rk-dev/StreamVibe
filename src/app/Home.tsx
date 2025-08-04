@@ -1,19 +1,23 @@
-import { PlayIcon } from "@heroicons/react/16/solid";
-import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
-import { motion } from "framer-motion";
-import { useScroll, useSpring } from "motion/react";
-import { AccordionQuestion } from "@/components/AccordionQuestion";
+import { AccordionContentRoot } from "@/components/Accordion";
+import {
+  AccordionInfo,
+  AccordionInfoContent,
+  AccordionInfoContentRoot,
+} from "@/components/AccordionInfo";
 import { CardCategory } from "@/components/Cards/CardCategory";
 import { CardPlan } from "@/components/Cards/CardPlan";
 import { DeviceSupportGrid } from "@/components/DeviceSupportGrid";
 import { Header } from "@/components/Header/Header";
+import { PlayIcon } from "@heroicons/react/16/solid";
+import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
+import { motion, useScroll, useSpring } from "framer-motion";
 
 export default function Home() {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
-    restDelta: 0.001
+    restDelta: 0.001,
   });
 
   return (
@@ -28,7 +32,7 @@ export default function Home() {
           right: 0,
           height: 2,
           originX: 0,
-          backgroundColor: "#FF0000"
+          backgroundColor: "#FF0000",
         }}
       />
       <motion.div
@@ -174,15 +178,90 @@ export default function Home() {
                 </button>
               </div>
 
-              <div className="grid grid-cols-2 grid-rows-4 gap-10 divide-y divide-Custom-Red-45/40">
-                <AccordionQuestion />
-                <AccordionQuestion />
-                <AccordionQuestion />
-                <AccordionQuestion />
-                <AccordionQuestion />
-                <AccordionQuestion />
-                <AccordionQuestion />
-                <AccordionQuestion />
+              <div className="grid grid-cols-2 grid-rows-1 gap-10  divide-y divide-Custom-Red-45/40">
+                <div className=" divide-y divide-Custom-Red-45/40">
+                  <AccordionInfo
+                    id="1"
+                    title="What is StreamVibe?"
+                    indexNumber={1}
+                  >
+                    <AccordionInfoContentRoot>
+                      <AccordionInfoContent />
+                    </AccordionInfoContentRoot>
+                  </AccordionInfo>
+
+                  <AccordionInfo
+                    id="2"
+                    title="What is StreamVibe?"
+                    indexNumber={2}
+                  >
+                    <AccordionInfoContentRoot>
+                      <AccordionInfoContent />
+                    </AccordionInfoContentRoot>
+                  </AccordionInfo>
+
+                  <AccordionInfo
+                    id="3"
+                    title="What is StreamVibe?"
+                    indexNumber={3}
+                  >
+                    <AccordionInfoContentRoot>
+                      <AccordionInfoContent />
+                    </AccordionInfoContentRoot>
+                  </AccordionInfo>
+
+                  <AccordionInfo
+                    id="4"
+                    title="What is StreamVibe?"
+                    indexNumber={4}
+                  >
+                    <AccordionInfoContentRoot>
+                      <AccordionInfoContent />
+                    </AccordionInfoContentRoot>
+                  </AccordionInfo>
+                </div>
+
+                <div className=" divide-y divide-Custom-Red-45/40">
+                  <AccordionInfo
+                    id="5"
+                    title="What is StreamVibe?"
+                    indexNumber={5}
+                  >
+                    <AccordionInfoContentRoot>
+                      <AccordionInfoContent />
+                    </AccordionInfoContentRoot>
+                  </AccordionInfo>
+
+                  <AccordionInfo
+                    id="6"
+                    title="What is StreamVibe?"
+                    indexNumber={6}
+                  >
+                    <AccordionInfoContentRoot>
+                      <AccordionInfoContent />
+                    </AccordionInfoContentRoot>
+                  </AccordionInfo>
+
+                  <AccordionInfo
+                    id="7"
+                    title="What is StreamVibe?"
+                    indexNumber={7}
+                  >
+                    <AccordionInfoContentRoot>
+                      <AccordionInfoContent />
+                    </AccordionInfoContentRoot>
+                  </AccordionInfo>
+
+                  <AccordionInfo
+                    id="8"
+                    title="What is StreamVibe?"
+                    indexNumber={8}
+                  >
+                    <AccordionInfoContentRoot>
+                      <AccordionInfoContent />
+                    </AccordionInfoContentRoot>
+                  </AccordionInfo>
+                </div>
               </div>
             </section>
           </motion.div>
