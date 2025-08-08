@@ -27,18 +27,17 @@ export default function MoviesAndShows() {
     >
       <div className="px-40">
         <Header />
-
         <section className="mb-75">
           <div className="h-[800px] w-full flex-1 rounded-t-xl border-Custom-Black-15 border-t ">
             <picture className="-z-10 mask-b-from-10% inset-0">
               <img
                 alt="Avengers: Endgame"
-                className="rounded-t-xl"
+                className="rounded-t-xl object-cover"
                 src="/src/assets/photo/PhotoMovieAvengers.png"
               />
             </picture>
 
-            <div className="-top-80 relative z-10 flex flex-col">
+            <div className="-top-80 relative flex flex-col">
               <div className="flex flex-col items-center gap-1 px-52 text-center">
                 <h1 className="font-Manrope font-bold text-4xl text-white">
                   Avengers : Endgame

@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 
 interface NavItemProps {
   title: string;
@@ -35,20 +35,20 @@ function NavItem({ title, isActive }: NavItemProps) {
 const NavItemList = [
   {
     title: "Home",
-    url: "/"
+    url: "/",
   },
   {
     title: "Movies & Shows",
-    url: "/movies-and-shows"
+    url: "/movies-and-shows",
   },
   {
     title: "Support",
-    url: "/support"
+    url: "/support",
   },
   {
     title: "Subscriptions",
-    url: "/subscriptions"
-  }
+    url: "/subscriptions",
+  },
 ];
 
 export { NavItemList, NavItem };

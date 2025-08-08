@@ -1,5 +1,3 @@
-import { MagnifyingGlassIcon } from "@heroicons/react/16/solid";
-import { BellIcon } from "@heroicons/react/24/outline";
 import { NavItem, NavItemList } from "@/components/Header/NavItem";
 
 export function NavItens() {
@@ -17,10 +15,6 @@ export function NavItens() {
             />
           ))}
         </ul>
-      </div>
-      <div className="flex flex-row gap-8">
-        <MagnifyingGlassIcon className="h-6 w-6 text-Custom-Gray-75" />
-        <BellIcon className="h-6 w-6 text-Custom-Gray-75" />
       </div>
     </>
   );

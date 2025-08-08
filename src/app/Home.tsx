@@ -1,4 +1,3 @@
-import { AccordionContentRoot } from "@/components/Accordion";
 import {
   AccordionInfo,
   AccordionInfoContent,
@@ -37,8 +36,7 @@ export default function Home() {
       />
       <motion.div
         initial={{ opacity: 0 }}
-        transition={{ delay: 0.2, duration: 1.5, ease: "easeInOut" }}
-        viewport={{ once: true }}
+        transition={{ delay: 0.2, duration: 1.5, ease: "easeIn" }}
         whileInView={{ opacity: 1 }}
       >
         <div className="px-40">
@@ -141,12 +139,30 @@ export default function Home() {
                 </div>
 
                 <div className="grid grid-cols-3 grid-rows-2 gap-4">
-                  <DeviceSupportGrid />
-                  <DeviceSupportGrid />
-                  <DeviceSupportGrid />
-                  <DeviceSupportGrid />
-                  <DeviceSupportGrid />
-                  <DeviceSupportGrid />
+                  <DeviceSupportGrid
+                    title="Smartphones"
+                    description="StreamVibe is optimized for both Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store"
+                  />
+                  <DeviceSupportGrid
+                    title="Tablets"
+                    description="StreamVibe is optimized for both Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store"
+                  />
+                  <DeviceSupportGrid
+                    title="Smart TV"
+                    description="StreamVibe is optimized for both Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store"
+                  />
+                  <DeviceSupportGrid
+                    title="Laptops"
+                    description="StreamVibe is optimized for both Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store"
+                  />
+                  <DeviceSupportGrid
+                    title="Gaming Consoles"
+                    description="StreamVibe is optimized for both Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store"
+                  />
+                  <DeviceSupportGrid
+                    title="VR Headsets"
+                    description="StreamVibe is optimized for both Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store"
+                  />
                 </div>
               </div>
             </section>
@@ -296,9 +312,21 @@ export default function Home() {
               </div>
 
               <div className="mb-37.5 grid grid-cols-3 grid-rows-1 gap-7.5">
-                <CardPlan />
-                <CardPlan />
-                <CardPlan />
+                <CardPlan
+                  title="Basic Plan"
+                  description="The basic plan for those who want to watch TV and movies."
+                  price={9.99}
+                />
+                <CardPlan
+                  title="Premium Plan"
+                  description="The premium plan for those who want to watch TV and movies."
+                  price={19.99}
+                />
+                <CardPlan
+                  title="Deluxe Plan"
+                  description="The deluxe plan for those who want to watch TV and movies."
+                  price={29.99}
+                />
               </div>
 
               <div className="flex h-[400px] flex-row rounded-lg border border-Custom-Black-15 bg-[url('./assets/photo/Banner-StreamVibe.png')] bg-center bg-cover bg-no-repeat">

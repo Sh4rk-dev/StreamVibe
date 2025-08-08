@@ -1,16 +1,21 @@
-export function CardPlan() {
+interface CardPlanProps {
+  title: string;
+  description: string;
+  price: number;
+}
+
+export function CardPlan({ title, description, price }: CardPlanProps) {
   return (
     <div className="flex flex-col rounded-xl border border-Custom-Black-15 bg-Custom-Black-10">
       <div className="flex flex-col gap-y-4 p-12.5">
-        <h1 className="font-Manrope text-2xl text-white">Basic Plan</h1>
+        <h1 className="font-Manrope text-2xl text-white">{title}</h1>
         <p className="font-Manrope text-Custom-Gray-60 text-lg">
-          Enjoy an extensive library of movies and shows, featuring a range of
-          content, including recently released titles.
+          {description}
         </p>
 
         <div className="my-12 flex flex-row items-end">
           <span className="font-Manrope font-bold text-4xl text-white">
-            $9.99
+            ${price.toFixed(2)}
           </span>
           <span className="font-Manrope text-Custom-Gray-60">/month</span>
         </div>
