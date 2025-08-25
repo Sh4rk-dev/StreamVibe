@@ -115,7 +115,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="mb-36 flex flex-row justify-between gap-7 overflow-hidden">
+              <div className="mb-12 flex flex-row justify-between gap-7 overflow-hidden lg:mb-36">
                 <CardCategory />
                 <CardCategory />
                 <CardCategory />
@@ -125,10 +125,10 @@ export default function Home() {
 
               <div className="flex flex-col gap-20">
                 <div className="flex flex-col gap-4">
-                  <h1 className="font-Manrope font-bold text-4xl text-white">
+                  <h1 className="font-Manrope font-bold text-white text-xl lg:text-4xl">
                     We Provide you streaming experience across various devices.
                   </h1>
-                  <p className="font-Manrope text-Custom-Gray-60 text-lg">
+                  <p className="font-Manrope text-Custom-Gray-60 lg:text-lg">
                     With StreamVibe, you can enjoy your favorite movies and TV
                     shows anytime, anywhere. Our platform is designed to be
                     compatible with a wide range of devices, ensuring that you
@@ -136,7 +136,7 @@ export default function Home() {
                   </p>
                 </div>
 
-                <div className="grid grid-cols-3 grid-rows-2 gap-4">
+                <div className="grid gap-4 lg:grid-cols-3 lg:grid-rows-2">
                   <DeviceSupportGrid
                     description="StreamVibe is optimized for both Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store"
                     title="Smartphones"
@@ -172,8 +172,8 @@ export default function Home() {
             viewport={{ once: true }}
             whileInView={{ y: 0, opacity: 1 }}
           >
-            <section className="mb-37.5">
-              <div className="mb-20 flex flex-row items-center justify-between">
+            <section className="mb-37.5 px-20 lg:px-40">
+              <div className="mb-20 flex flex-col items-start justify-between gap-6 lg:flex-row lg:items-center">
                 <div className="flex flex-col gap-4">
                   <h1 className="font-Manrope font-bold text-4xl text-white">
                     Frequently Asked Questions
@@ -192,8 +192,8 @@ export default function Home() {
                 </button>
               </div>
 
-              <div className="grid grid-cols-2 grid-rows-1 gap-10 divide-y divide-Custom-Red-45/40">
-                <div className=" divide-y divide-Custom-Red-45/40">
+              <div className="grid divide-y divide-Custom-Red-45/75 lg:grid-cols-2 lg:grid-rows-1 lg:gap-10">
+                <div className="divide-y divide-Custom-Red-45/75">
                   <AccordionInfo indexNumber={1} title="What is StreamVibe?">
                     <AccordionInfo.ContentRoot>
                       <AccordionInfo.Content />
@@ -219,7 +219,7 @@ export default function Home() {
                   </AccordionInfo>
                 </div>
 
-                <div className=" divide-y divide-Custom-Red-45/40">
+                <div className="divide-y divide-Custom-Red-45/75">
                   <AccordionInfo indexNumber={5} title="What is StreamVibe?">
                     <AccordionInfo.ContentRoot>
                       <AccordionInfo.Content />
@@ -254,8 +254,8 @@ export default function Home() {
             viewport={{ once: true }}
             whileInView={{ y: 0, opacity: 1 }}
           >
-            <section className="mb-37.5">
-              <div className="flex flex-row justify-between gap-6">
+            <section className="mb-37.5 px-20 lg:px-40">
+              <div className="flex flex-col gap-6 lg:flex-row lg:justify-between">
                 <div className="flex flex-col gap-3.5">
                   <h1 className="font-Manrope font-bold text-4xl text-white">
                     Choose the plan that's right for you
@@ -267,49 +267,56 @@ export default function Home() {
                   </p>
                 </div>
 
-                <div className="mt-6 mb-20 flex flex-row rounded-xl border border-Custom-Black-15 bg-Custom-Black-06 p-2.5">
-                  <span className="rounded-xl bg-Custom-Black-12 px-6 py-3.5 font-Manrope text-white">
+                <div className="mt-6 mb-20 flex w-fit flex-row rounded-xl border border-Custom-Black-15 bg-Custom-Black-06 p-2.5">
+                  <button
+                    className="rounded-xl bg-Custom-Black-12 px-6 py-3.5 font-Manrope text-white"
+                    type="button"
+                  >
                     Monthly
-                  </span>
-                  <span className="px-6 py-3.5 font-Manrope text-Custom-Gray-60">
+                  </button>
+
+                  <button
+                    className="px-6 py-3.5 font-Manrope text-Custom-Gray-60"
+                    type="button"
+                  >
                     Yearly
-                  </span>
+                  </button>
                 </div>
               </div>
 
-              <div className="mb-37.5 grid grid-cols-3 grid-rows-1 gap-7.5">
+              <div className="mb-37.5 grid gap-7.5 lg:grid-cols-3 lg:grid-rows-1">
                 <CardPlan
-                  description="The basic plan for those who want to watch TV and movies."
+                  description="Enjoy an extensive library of movies and shows, featuring a range of content, including recently released titles."
                   price={9.99}
                   title="Basic Plan"
                 />
                 <CardPlan
-                  description="The premium plan for those who want to watch TV and movies."
-                  price={19.99}
-                  title="Premium Plan"
+                  description="Access to a wider selection of movies and shows, including most new releases and exclusive content"
+                  price={12.99}
+                  title="Standard Plan"
                 />
                 <CardPlan
-                  description="The deluxe plan for those who want to watch TV and movies."
-                  price={29.99}
-                  title="Deluxe Plan"
+                  description="Access to a widest selection of movies and shows, including all new releases and Offline Viewing"
+                  price={14.99}
+                  title="Premium Plan"
                 />
               </div>
 
-              <div className="flex h-[400px] flex-row rounded-lg border border-Custom-Black-15 bg-[url('./assets/photo/Banner-StreamVibe.png')] bg-center bg-cover bg-no-repeat">
+              <div className="flex h-[400px] flex-col justify-center gap-10 rounded-lg border border-Custom-Black-15 bg-[url('./assets/photo/Banner-StreamVibe.png')] bg-center bg-cover bg-no-repeat lg:flex-row">
                 <div className="flex items-center justify-between gap-20 px-20">
-                  <div className="flex flex-col gap-3.5 ">
-                    <h1 className="font-Manrope font-bold text-5xl text-white">
+                  <div className="flex flex-col gap-3.5">
+                    <h1 className="text-center font-Manrope font-bold text-5xl text-white">
                       Start your free trial today!
                     </h1>
 
-                    <span className="font-Manrope text-Custom-Gray-60">
+                    <span className="text-center font-Manrope text-Custom-Gray-60">
                       This is a clear and concise call to action that encourages
                       users to sign up for a free trial of StreamVibe.
                     </span>
                   </div>
                 </div>
 
-                <div className="flex flex-1 items-center justify-around">
+                <div className="flex items-center justify-around lg:flex-1">
                   <button
                     className="rounded-lg bg-Custom-Red-45 px-6 py-4 text-white"
                     type="button"

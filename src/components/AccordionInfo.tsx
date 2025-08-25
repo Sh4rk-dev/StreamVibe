@@ -22,7 +22,7 @@ function AccordionInfo({ title, indexNumber, children }: AccordionInfoProps) {
           onClick={() => setIsOpen(!isOpen)}
           type="button"
         >
-          <div className="flex w-full flex-row items-center justify-between">
+          <div className="flex w-full flex-row items-center justify-between pb-4">
             <div className=" flex flex-row items-center gap-5">
               <div className=" flex h-[58px] w-[58px] flex-row items-center justify-center rounded-xl border border-Custom-Black-15 bg-Custom-Black-12">
                 <h1 className="font-Manrope text-white text-xl">

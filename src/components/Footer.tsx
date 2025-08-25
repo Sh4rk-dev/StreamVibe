@@ -1,7 +1,7 @@
 export function Footer() {
   return (
-    <footer className="bg-Custom-Black-06 px-40 pt-25">
-      <div className="grid grid-cols-6 grid-rows-1 gap-7.5 pb-25">
+    <footer className="bg-Custom-Black-06 px-20 pt-25 lg:px-40">
+      <div className="grid grid-cols-2 gap-7.5 pb-25 lg:grid-cols-6 lg:grid-rows-1">
         <div>
           <h1 className="text- mb-3 font-Manrope font-bold text-white">Home</h1>
           <div className="flex flex-col gap-3.5">
