@@ -1,18 +1,19 @@
-import "../src/global.css";
+import '../src/global.css';
 
-import React from "react";
-import { createRoot } from "react-dom/client";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import Home from "@/app/Home";
-import MoviesAndShows from "@/app/MoviesAndShows";
-import MoviesInfo from "@/app/MoviesInfo";
-import ShowInfo from "@/app/ShowInfo";
-import Support from "@/app/Support";
-import { ModalProvider } from "@/context/useModal";
+import Home from '@/app/Home';
+import MoviesAndShows from '@/app/MoviesAndShows';
+import MoviesInfo from '@/app/MoviesInfo';
+import ShowInfo from '@/app/ShowInfo';
+import Subscription from '@/app/Subscription';
+import Support from '@/app/Support';
+import { ModalProvider } from '@/context/useModal';
 
 // biome-ignore lint/style/noNonNullAssertion: <explanation>
-createRoot(document.getElementById("root")!).render(
+createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <ModalProvider>
       <BrowserRouter>
@@ -25,6 +26,7 @@ createRoot(document.getElementById("root")!).render(
           />
           <Route element={<ShowInfo />} path="/movies-and-shows/showInfo/1" />
           <Route element={<Support />} path="/support" />
+          <Route element={<Subscription />} path="/subscriptions" />
         </Routes>
       </BrowserRouter>
     </ModalProvider>

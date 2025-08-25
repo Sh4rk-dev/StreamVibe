@@ -1,10 +1,10 @@
-import { ArrowRightIcon } from "@heroicons/react/16/solid";
+import { ArrowRightIcon } from '@heroicons/react/16/solid';
 
 export function CardCategory() {
   return (
     <div className="rounded-lg border border-Custom-Black-15 bg-Custom-Black-10">
       <div className="p-5">
-        <picture className="mx-auto">
+        <picture>
           <img alt="Image: Category" src="./src/assets/photo/Category.png" />
         </picture>
 

@@ -7,15 +7,15 @@ import {
   PlayIcon,
   PlusIcon,
   SpeakerWaveIcon,
-  StarIcon
-} from "@heroicons/react/16/solid";
-
+  StarIcon,
+} from '@heroicons/react/16/solid';
 import {
   Squares2X2Icon,
-  StarIcon as StarIconSolid
-} from "@heroicons/react/24/outline";
-import { Header } from "@/components/Header/Header";
-import { ReviewCard } from "@/components/ReviewCard";
+  StarIcon as StarIconSolid,
+} from '@heroicons/react/24/outline';
+import { Footer } from '@/components/Footer';
+import { Header } from '@/components/Header/Header';
+import { Review } from '@/components/ReviewCard';
 
 export default function MoviesInfo() {
   return (
@@ -97,39 +97,25 @@ export default function MoviesInfo() {
                       key={i}
                     >
                       <img
-                        alt={"Actor1"}
+                        alt={'Actor1'}
                         className="h-full w-full rounded-xl object-cover"
-                        src={"/src/assets/photo/Actor1.png"}
+                        src={'/src/assets/photo/Actor1.png'}
                       />
                     </picture>
                   ))}
                 </div>
               </div>
 
-              <div className="col-span-2 col-start-1 row-start-3 flex flex-col rounded-lg border border-Custom-Black-15 bg-Custom-Black-10 p-12.5">
-                <div className="flex flex-row items-center justify-between">
-                  <h1 className="font-Manrope font-medium text-Custom-Gray-60">
-                    Reviews
-                  </h1>
-
-                  <button
-                    className="mt-4 flex flex-row items-center gap-2 rounded-lg bg-Custom-Red-45 px-6 py-3.5 text-white"
-                    type="button"
-                  >
-                    <PlusIcon className="h-6 w-6 text-white" />
-                    <span>Add Your Review</span>
-                  </button>
-                </div>
-
-                <div className="flex flex-col gap-4 py-10">
-                  <ReviewCard
-                    location="New York"
-                    name="John Doe"
-                    rating={4.5}
-                    reviewText="This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it."
-                  />
-                </div>
-              </div>
+              <Review>
+                <Review.Header nameButton="Add Your Review" title="Reviews" />
+                <Review.Card
+                  location="India"
+                  name="Aniket Roy"
+                  rating={4.5}
+                  reviewText="This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas to watch but had a houseful board so couldn’t watch it.m"
+                />
+                <Review.Arrow />
+              </Review>
             </div>
 
             <div className="col-start-3 row-span-1 row-start-1 flex flex-1 flex-col rounded-xl border border-Custom-Black-15 bg-Custom-Black-10 p-12.5">
@@ -247,9 +233,9 @@ export default function MoviesInfo() {
                   <div className="flex flex-row items-center gap-2">
                     <picture className="h-15 w-15 justify-between rounded-xl border border-Custom-Black-15">
                       <img
-                        alt={"Actor1"}
+                        alt={'Actor1'}
                         className="h-full w-full rounded-xl object-cover"
-                        src={"/src/assets/photo/Actor1.png"}
+                        src={'/src/assets/photo/Actor1.png'}
                       />
                     </picture>
                     <div className="flex flex-col items-start">
@@ -273,9 +259,9 @@ export default function MoviesInfo() {
                   <div className="flex flex-row items-center gap-2">
                     <picture className="h-15 w-15 justify-between rounded-xl border border-Custom-Black-15">
                       <img
-                        alt={"Actor1"}
+                        alt={'Actor1'}
                         className="h-full w-full rounded-xl object-cover"
-                        src={"/src/assets/photo/ProductMusic.png"}
+                        src={'/src/assets/photo/ProductMusic.png'}
                       />
                     </picture>
                     <div className="flex flex-col items-start">
@@ -320,118 +306,7 @@ export default function MoviesInfo() {
         </section>
       </div>
 
-      <footer className="bg-Custom-Black-06 px-40 pt-25">
-        <div className="grid grid-cols-6 grid-rows-1 gap-7.5 pb-25">
-          <div>
-            <h1 className="text- mb-3 font-Manrope font-bold text-white">
-              Home
-            </h1>
-            <div className="flex flex-col gap-3.5">
-              <h1 className="font-Manrope text-Custom-Gray-60">Categories</h1>
-              <h1 className="font-Manrope text-Custom-Gray-60">Devices</h1>
-              <h1 className="font-Manrope text-Custom-Gray-60">Pricing</h1>
-              <h1 className="font-Manrope text-Custom-Gray-60">FAQ</h1>
-            </div>
-          </div>
-
-          <div>
-            <h1 className="text- mb-3 font-Manrope font-bold text-white">
-              Movies
-            </h1>
-            <div className="flex flex-col gap-3.5">
-              <h1 className="font-Manrope text-Custom-Gray-60">Gernes</h1>
-              <h1 className="font-Manrope text-Custom-Gray-60">Trending</h1>
-              <h1 className="font-Manrope text-Custom-Gray-60">New Release</h1>
-              <h1 className="font-Manrope text-Custom-Gray-60">Popular</h1>
-            </div>
-          </div>
-
-          <div>
-            <h1 className="text- mb-3 font-Manrope font-bold text-white">
-              Shows
-            </h1>
-            <div className="flex flex-col gap-3.5">
-              <h1 className="font-Manrope text-Custom-Gray-60">Gernes</h1>
-              <h1 className="font-Manrope text-Custom-Gray-60">Trending</h1>
-              <h1 className="font-Manrope text-Custom-Gray-60">New Release</h1>
-              <h1 className="font-Manrope text-Custom-Gray-60">Popular</h1>
-            </div>
-          </div>
-
-          <div>
-            <h1 className="text- mb-3 font-Manrope font-bold text-white">
-              Support
-            </h1>
-            <div>
-              <h1 className="font-Manrope text-Custom-Gray-60">Contact Us</h1>
-            </div>
-          </div>
-
-          <div>
-            <h1 className="text- mb-3 font-Manrope font-bold text-white">
-              Subscription
-            </h1>
-            <div className="flex flex-col gap-3.5">
-              <h1 className="font-Manrope text-Custom-Gray-60">Plans</h1>
-              <h1 className="font-Manrope text-Custom-Gray-60">Features</h1>
-            </div>
-          </div>
-
-          <div>
-            <div className="gap-3.5">
-              <h1 className="text- mb-3 font-Manrope font-bold text-white">
-                Connect With Us
-              </h1>
-            </div>
-            <div className="flex flex-row gap-3.5">
-              <picture className=" rounded-lg border border-Custom-Black-15 bg-Custom-Black-10 p-4">
-                <img
-                  alt="Facebook Icon"
-                  src="./src/assets/icons/FacebookIcon.svg"
-                />
-              </picture>
-              <picture className=" rounded-lg border border-Custom-Black-15 bg-Custom-Black-10 p-4">
-                <img
-                  alt="Twitter Icon"
-                  src="./src/assets/icons/TwitterIcon.svg"
-                />
-              </picture>
-              <picture className=" rounded-lg border border-Custom-Black-15 bg-Custom-Black-10 p-4">
-                <img
-                  alt="LinkedIn Icon"
-                  src="./src/assets/icons/LinkedInIcon.svg"
-                />
-              </picture>
-            </div>
-          </div>
-        </div>
-
-        <div className="flex flex-row justify-between border-Custom-Black-15 border-t pt-4 pb-12.5 ">
-          <div className="">
-            <h1 className="font-Manrope text-Custom-Gray-60">
-              @2023 streamvib, All Rights Reserved
-            </h1>
-          </div>
-
-          <div className="">
-            <div className="flex flex-row items-center gap-3.5">
-              <h1 className="font-Manrope text-Custom-Gray-60">Terms of Use</h1>
-
-              <div className="h-4 w-px bg-Custom-Gray-60/50" />
-
-              <h1 className="font-Manrope text-Custom-Gray-60">
-                Privacy Policy
-              </h1>
-
-              <div className="h-4 w-px bg-Custom-Gray-60/50" />
-
-              <h1 className="font-Manrope text-Custom-Gray-60">
-                Cookie Policy
-              </h1>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 }
