@@ -7,6 +7,7 @@ import { CardPlan } from '@/components/Cards/CardPlan';
 import { DeviceSupportGrid } from '@/components/DeviceSupportGrid';
 import { Footer } from '@/components/Footer';
 import { Header } from '@/components/Header/Header';
+import { PromoBanner } from '@/components/PromoBanner';
 
 export default function Home() {
   const { scrollYProgress } = useScroll();
@@ -37,7 +38,7 @@ export default function Home() {
         whileInView={{ opacity: 1 }}
       >
         <div className="w-full">
-          <section className="mb-37.5 flex h-screen flex-col justify-between px-20 lg:px-40">
+          <section className="mb-37.5 flex h-screen flex-col justify-between px-10 lg:px-40">
             <Header />
 
             <picture className="-z-10 absolute inset-0 flex w-full">
@@ -76,7 +77,7 @@ export default function Home() {
             viewport={{ once: true }}
             whileInView={{ y: 0, opacity: 1 }}
           >
-            <section className="mb-37.5 px-20 lg:px-40">
+            <section className="mb-37.5 px-10 lg:px-40">
               <div>
                 <div className="mb-20 flex flex-row items-center justify-between">
                   <div className="flex flex-col gap-4">
@@ -172,7 +173,7 @@ export default function Home() {
             viewport={{ once: true }}
             whileInView={{ y: 0, opacity: 1 }}
           >
-            <section className="mb-37.5 px-20 lg:px-40">
+            <section className="mb-37.5 px-10 lg:px-40">
               <div className="mb-20 flex flex-col items-start justify-between gap-6 lg:flex-row lg:items-center">
                 <div className="flex flex-col gap-4">
                   <h1 className="font-Manrope font-bold text-4xl text-white">
@@ -254,7 +255,7 @@ export default function Home() {
             viewport={{ once: true }}
             whileInView={{ y: 0, opacity: 1 }}
           >
-            <section className="mb-37.5 px-20 lg:px-40">
+            <section className="mb-37.5 px-10 lg:px-40">
               <div className="flex flex-col gap-6 lg:flex-row lg:justify-between">
                 <div className="flex flex-col gap-3.5">
                   <h1 className="font-Manrope font-bold text-4xl text-white">
@@ -301,31 +302,9 @@ export default function Home() {
                   title="Premium Plan"
                 />
               </div>
-
-              <div className="flex h-[400px] flex-col justify-center gap-10 rounded-lg border border-Custom-Black-15 bg-[url('./assets/photo/Banner-StreamVibe.png')] bg-center bg-cover bg-no-repeat lg:flex-row">
-                <div className="flex items-center justify-between gap-20 px-20">
-                  <div className="flex flex-col gap-3.5">
-                    <h1 className="text-center font-Manrope font-bold text-5xl text-white">
-                      Start your free trial today!
-                    </h1>
-
-                    <span className="text-center font-Manrope text-Custom-Gray-60">
-                      This is a clear and concise call to action that encourages
-                      users to sign up for a free trial of StreamVibe.
-                    </span>
-                  </div>
-                </div>
-
-                <div className="flex items-center justify-around lg:flex-1">
-                  <button
-                    className="rounded-lg bg-Custom-Red-45 px-6 py-4 text-white"
-                    type="button"
-                  >
-                    Start a Free Trail
-                  </button>
-                </div>
-              </div>
             </section>
+
+            <PromoBanner />
           </motion.div>
         </div>
 

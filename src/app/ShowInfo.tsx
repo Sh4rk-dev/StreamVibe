@@ -9,6 +9,7 @@ import {
 
 import { Footer } from '@/components/Footer';
 import { Header } from '@/components/Header/Header';
+import { PromoBanner } from '@/components/PromoBanner';
 import { Review } from '@/components/ReviewCard';
 import { SeasonEpisodes } from '@/components/SeasonEpisodes';
 import { ShowDetails } from '@/components/ShowDetails';
@@ -181,31 +182,7 @@ export default function ShowInfo() {
           </div>
         </section>
 
-        <section className="my-37.5">
-          <div className="flex h-[400px] flex-row rounded-lg border border-Custom-Black-15 bg-[url('./assets/photo/Banner-StreamVibe.png')] bg-center bg-cover bg-no-repeat">
-            <div className="flex items-center justify-between gap-20 px-20">
-              <div className="flex flex-col gap-3.5 ">
-                <h1 className="font-Manrope font-bold text-5xl text-white">
-                  Start your free trial today!
-                </h1>
-
-                <span className="font-Manrope text-Custom-Gray-60">
-                  This is a clear and concise call to action that encourages
-                  users to sign up for a free trial of StreamVibe.
-                </span>
-              </div>
-            </div>
-
-            <div className="flex flex-1 items-center justify-around">
-              <button
-                className="rounded-lg bg-Custom-Red-45 px-6 py-4 text-white"
-                type="button"
-              >
-                Start a Free Trail
-              </button>
-            </div>
-          </div>
-        </section>
+        <PromoBanner />
       </div>
 
       <Footer />

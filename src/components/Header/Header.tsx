@@ -16,7 +16,7 @@ export function Header() {
   const { openModal, handleOpenModal } = useContext(ModalContext);
 
   return (
-    <header className="flex w-full items-center justify-center gap-10 py-8">
+    <header className="flex w-full items-center justify-center gap-10 px-10 py-8 lg:px-40">
       <div className="flex w-full items-center justify-between">
         <picture className="h-12 w-40 bg-contain bg-no-repeat">
           <img alt="Logo" src="/src/assets/icons/Logo-Desk.svg" />
