@@ -90,7 +90,7 @@ export default function MoviesAndShows() {
                 Movies
               </span>
 
-              <div className="grid grid-cols-1 gap-25 pb-12.5">
+              <div className="grid grid-cols-1 gap-25 overflow-hidden pb-12.5">
                 <CarouselGenre />
                 <CarouselPopularGenres />
                 <CarouselTrendingNow />
@@ -113,7 +113,7 @@ export default function MoviesAndShows() {
                 Shows
               </span>
 
-              <div className="grid grid-cols-1 gap-25 pb-12.5">
+              <div className="grid grid-cols-1 gap-25 overflow-hidden pb-12.5">
                 <CarouselGenre />
                 <CarouselPopularGenres />
                 <CarouselTrendingShowsNow />

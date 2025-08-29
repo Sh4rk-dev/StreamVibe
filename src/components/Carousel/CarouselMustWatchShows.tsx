@@ -1,11 +1,11 @@
-import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
-import { motion } from "framer-motion";
-import { CardMustWatchShows } from "@/components/Cards/CardMustWatchShows";
+import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
+import { motion } from 'framer-motion';
+import { CardMustWatchShows } from '@/components/Cards/CardMustWatchShows';
 export function CarouselMustWatchShows() {
   return (
     <motion.div
       initial={{ y: 100, opacity: 0 }}
-      transition={{ delay: 0.2, duration: 1.5, ease: "easeInOut" }}
+      transition={{ delay: 0.2, duration: 1.5, ease: 'easeInOut' }}
       viewport={{ once: true }}
       whileInView={{ y: 0, opacity: 1 }}
     >
@@ -16,7 +16,7 @@ export function CarouselMustWatchShows() {
           </h1>
         </div>
 
-        <div className="flex flex-row items-center rounded-xl bg-Custom-Black-06 p-4">
+        <div className="hidden flex-row items-center rounded-xl bg-Custom-Black-06 p-4 lg:flex">
           <button className="rounded-lg bg-Custom-Black-10 p-3" type="button">
             <ArrowLeftIcon className="h-6 w-6 text-white" />
           </button>
